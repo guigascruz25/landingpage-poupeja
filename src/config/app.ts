@@ -1,8 +1,15 @@
-// Dynamic configuration for the finance app landing page
-// This replaces .env functionality and makes the page fully configurable
+﻿// Dynamic configuration for the finance app landing page
+// Now using environment variables with fallbacks for backward compatibility
 
 export interface AppConfig {
   company_name: string;
+  page_title: string;
+  page_description: string;
+  logo_url: string;
+  favicon_url: string;
+  support_phone: string;
+  support_email: string;
+  support_whatsapp: string;
   plan_price_monthly: string;
   plan_price_annual: string;
   stripe_price_id_annual: string;
@@ -12,30 +19,51 @@ export interface AppConfig {
   app_url: string;
   terms_url?: string;
   privacy_url?: string;
+  template_variant: string; // Nova variável para template
 }
 
+// Helper function to parse comma-separated string to array
+const parseFeatures = (envVar: string | undefined, fallback: string[]): string[] => {
+  if (!envVar) return fallback;
+  return envVar.split(",").map(feature => feature.trim());
+};
+
 export const appConfig: AppConfig = {
-  company_name: "Poupe Já AI",
-  plan_price_monthly: "19,90",
-  plan_price_annual: "177,00",
-  stripe_price_id_annual: "price_1q2w3e4r",
-  stripe_price_id_monthly: "price_eq23e1e2",
-  plan_features_monthly: [
-    "Movimentos ilimitados",
-    "Dashboard completo",
-    "Todos os relatórios",
-    "Metas ilimitadas",
-    "Agendamentos"
-  ],
-  plan_features_annual: [
-    "Movimentos ilimitados",
-    "Dashboard completo",
-    "Todos os relatórios",
-    "Metas ilimitadas",
-    "Agendamentos",
-    "Suporte prioritário"
-  ],
-  app_url: "https://app.dominiodoapp.com.br",
-  terms_url: "#",
-  privacy_url: "#"
+  company_name: import.meta.env.VITE_COMPANY_NAME || "Poupe Já AI",
+  page_title: import.meta.env.VITE_PAGE_TITLE || "Poupe Já AI - Controle Total das Suas Finanças",
+  page_description: import.meta.env.VITE_PAGE_DESCRIPTION || "Gerencie receitas e despesas pelo App ou WhatsApp. Dashboard completo, metas financeiras e relatórios detalhados. Comece grátis!",
+  logo_url: import.meta.env.VITE_LOGO_URL || "https://via.placeholder.com/200x60/4F46E5/FFFFFF?text=LOGO",
+  favicon_url: import.meta.env.VITE_FAVICON_URL || "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=F",
+  support_phone: import.meta.env.VITE_SUPPORT_PHONE || "+55 (11) 99999-9999",
+  support_email: import.meta.env.VITE_SUPPORT_EMAIL || "suporte@poupeja.com.br",
+  support_whatsapp: import.meta.env.VITE_SUPPORT_WHATSAPP || "+5511999999999",
+  plan_price_monthly: import.meta.env.VITE_PLAN_PRICE_MONTHLY || "19,90",
+  plan_price_annual: import.meta.env.VITE_PLAN_PRICE_ANNUAL || "177,00",
+  stripe_price_id_annual: import.meta.env.VITE_STRIPE_PRICE_ID_ANNUAL || "price_1q2w3e4r",
+  stripe_price_id_monthly: import.meta.env.VITE_STRIPE_PRICE_ID_MONTHLY || "price_eq23e1e2",
+  plan_features_monthly: parseFeatures(
+    import.meta.env.VITE_PLAN_FEATURES_MONTHLY,
+    [
+      "Movimentos ilimitados",
+      "Dashboard completo",
+      "Todos os relatórios",
+      "Metas ilimitadas",
+      "Agendamentos"
+    ]
+  ),
+  plan_features_annual: parseFeatures(
+    import.meta.env.VITE_PLAN_FEATURES_ANNUAL,
+    [
+      "Movimentos ilimitados",
+      "Dashboard completo",
+      "Todos os relatórios",
+      "Metas ilimitadas",
+      "Agendamentos",
+      "Suporte prioritário"
+    ]
+  ),
+  app_url: import.meta.env.VITE_APP_URL || "https://app.dominiodoapp.com.br",
+  terms_url: import.meta.env.VITE_TERMS_URL || "#",
+  privacy_url: import.meta.env.VITE_PRIVACY_URL || "#",
+  template_variant: import.meta.env.VITE_TEMPLATE_VARIANT || "default"
 };

@@ -1,5 +1,4 @@
 import { Smartphone, Monitor } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
 
 const AppDemo = () => {
   return (
@@ -36,25 +35,24 @@ const AppDemo = () => {
                   <Smartphone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Controle via WhatsApp</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">WhatsApp Integration</h3>
                   <p className="text-muted-foreground">
-                    Registre gastos e receitas instantaneamente pelo WhatsApp, onde quer que você esteja
+                    Adicione receitas e despesas via mensagem. Simples e prático para o dia a dia
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Demo Image */}
+          {/* Visual */}
           <div className="order-1 lg:order-2">
             <div className="relative">
-              <div className="bg-gradient-hero rounded-3xl p-4 shadow-xl">
-                <img 
-                  src={heroDashboard}
-                  alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
-                  className="w-full rounded-2xl shadow-lg"
-                />
-              </div>
+              {/* Imagem SEM fundo colorido e MAIOR */}
+              <img 
+                src="/imagens/app-macbook-poupeja.png"
+                alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
+                className="w-[800px] h-auto mx-auto drop-shadow-2xl"
+              />
               
               {/* Floating stats card */}
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">

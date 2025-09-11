@@ -1,6 +1,19 @@
-import { appConfig } from "@/config/app";
+﻿import { appConfig } from "@/config/app";
 
 const Footer = () => {
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre os planos da ${appConfig.company_name}.`);
+    window.open(`https://wa.me/${appConfig.support_whatsapp.replace(/\D/g, '')}?text=${message}`, '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open(`mailto:${appConfig.support_email}`, '_blank');
+  };
+
+  const handlePhoneClick = () => {
+    window.open(`tel:${appConfig.support_phone}`, '_blank');
+  };
+
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
@@ -13,7 +26,7 @@ const Footer = () => {
               financeira que você sempre sonhou.
             </p>
             <div className="text-background/60 text-sm">
-              © 2024 {appConfig.company_name}. Todos os direitos reservados.
+               2024 {appConfig.company_name}. Todos os direitos reservados.
             </div>
           </div>
 
@@ -45,7 +58,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href={appConfig.terms_url || "#"}
+                  href="/termos"
                   className="text-background/80 hover:text-background transition-colors duration-200"
                 >
                   Termos de Uso
@@ -53,7 +66,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href={appConfig.privacy_url || "#"}
+                  href="/privacidade"
                   className="text-background/80 hover:text-background transition-colors duration-200"
                 >
                   Política de Privacidade
@@ -67,8 +80,30 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Suporte</h4>
             <ul className="space-y-3 text-background/80">
               <li>Atendimento 24/7</li>
-              <li>WhatsApp: (11) 9 9999-9999</li>
-              <li>Email: suporte@{appConfig.company_name.toLowerCase().replace(' ', '')}.com</li>
+              <li>
+                <button 
+                  onClick={handlePhoneClick}
+                  className="hover:text-background transition-colors duration-200 cursor-pointer"
+                >
+                   {appConfig.support_phone}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={handleWhatsAppClick}
+                  className="hover:text-background transition-colors duration-200 cursor-pointer"
+                >
+                   WhatsApp: {appConfig.support_phone}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={handleEmailClick}
+                  className="hover:text-background transition-colors duration-200 cursor-pointer"
+                >
+                   {appConfig.support_email}
+                </button>
+              </li>
               <li className="pt-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
@@ -82,7 +117,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            Desenvolvido com ❤️ para ajudar você a alcançar seus objetivos financeiros
+            Desenvolvido com  para ajudar você a alcançar seus objetivos financeiros
           </p>
         </div>
       </div>

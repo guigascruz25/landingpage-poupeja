@@ -1,10 +1,15 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { appConfig } from "@/config/app";
 
 const Hero = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('plans');
     plansSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre os planos da ${appConfig.company_name}.`);
+    window.open(`https://wa.me/${appConfig.support_whatsapp.replace(/\D/g, '')}?text=${message}`, '_blank');
   };
 
   return (
@@ -19,9 +24,25 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo/Company Name */}
         <div className="mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2">
-            {appConfig.company_name}
-          </h1>
+          {/* Logo dinâmica */}
+          <div className="mb-4">
+            <img 
+              src={appConfig.logo_url} 
+              alt={appConfig.company_name}
+              className="h-16 md:h-20 mx-auto object-contain"
+              onError={(e) => {
+                // Fallback para texto se a imagem não carregar
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextElementSibling.style.display = 'block';
+              }}
+            />
+            <h1 
+              className="text-4xl md:text-6xl font-bold text-white mb-2 hidden"
+              style={{ display: 'none' }}
+            >
+              {appConfig.company_name}
+            </h1>
+          </div>
           <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
         </div>
 
@@ -73,6 +94,24 @@ const Hero = () => {
             <div className="w-2 h-2 bg-success rounded-full"></div>
             <span className="text-sm">Sem fidelidade</span>
           </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-white/60 text-sm">
+          <button 
+            onClick={handleWhatsAppClick}
+            className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+          >
+            <span></span>
+            <span>WhatsApp: {appConfig.support_phone}</span>
+          </button>
+          <button 
+            onClick={() => window.open(`mailto:${appConfig.support_email}`, '_blank')}
+            className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+          >
+            <span></span>
+            <span>{appConfig.support_email}</span>
+          </button>
         </div>
       </div>
     </section>
