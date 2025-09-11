@@ -17,26 +17,42 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 214 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 214 100% 70%;
+    --primary-dark: 214 89% 52%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 146 64% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 146 64% 60%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 214 100% 96%;
+    --accent-foreground: 214 89% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 214 100% 59%;
 
-    --radius: 0.5rem;
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 59%), hsl(214 89% 52%));
+    --gradient-secondary: linear-gradient(135deg, hsl(146 64% 47%), hsl(146 64% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 59%) 0%, hsl(146 64% 47%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+
+    --shadow-sm: 0 1px 2px 0 hsl(214 100% 59% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(214 100% 59% / 0.1), 0 2px 4px -1px hsl(214 100% 59% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(214 100% 59% / 0.1), 0 4px 6px -2px hsl(214 100% 59% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(214 100% 59% / 0.1), 0 10px 10px -5px hsl(214 100% 59% / 0.04);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -97,6 +113,10 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
