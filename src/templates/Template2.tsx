@@ -282,57 +282,61 @@ const Template2 = () => {
       </section>
 
       {/* Pricing Section - Verde Moderno COM EFEITOS */}
-      <section id="plans" className="py-20 bg-gray-50">
+      <section id="plans" className="py-20 bg-emerald-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Escolha seu plano</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Planos flexíveis para todos os perfis</p>
+            <h3 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-4">Escolha seu plano</h3>
+            <p className="text-xl text-emerald-700 max-w-3xl mx-auto">Planos flexíveis para todos os perfis</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Plano Mensal */}
             <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in">
               <div className="text-center mb-8">
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">Plano Mensal</h4>
-                <div className="text-4xl font-bold text-gray-900 mb-2">R$ {appConfig.plan_price_monthly}</div>
-                <div className="text-gray-600">por mês</div>
+                <h4 className="text-2xl font-bold text-emerald-900 mb-2">Plano Mensal</h4>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">
+                  R$ {appConfig.plan_price_monthly}
+                </div>
+                <p className="text-emerald-700">por mês</p>
               </div>
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_monthly.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 animate-fade-in-up">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span className="text-gray-600">{feature}</span>
+                    <span className="text-emerald-700">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`, '_blank')}
               >
                 Começar Agora
               </button>
             </div>
 
             {/* Plano Anual */}
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-emerald-200 animate-scale-in">
+            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-emerald-500 animate-scale-in">
               <div className="text-center mb-8">
-                <div className="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 animate-pulse-glow-green">
-                  Mais Popular
+                <div className="inline-block bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
+                  Mais vantajoso
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">Plano Anual</h4>
-                <div className="text-4xl font-bold text-gray-900 mb-2">R$ {appConfig.plan_price_annual}</div>
-                <div className="text-gray-600">por ano</div>
+                <h4 className="text-2xl font-bold text-emerald-900 mb-2">Plano Anual</h4>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">
+                  R$ {appConfig.plan_price_annual}
+                </div>
+                <p className="text-emerald-700">por ano</p>
               </div>
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_annual.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 animate-fade-in-up">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span className="text-gray-600">{feature}</span>
+                    <span className="text-emerald-700">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`, '_blank')}
               >
                 Começar Agora
               </button>

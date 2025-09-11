@@ -331,7 +331,7 @@ const Template4 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`, '_blank')}
               >
                 Começar Agora
               </button>
@@ -341,7 +341,7 @@ const Template4 = () => {
             <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-600 animate-scale-in">
               <div className="text-center mb-8">
                 <div className="inline-block bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
-                  Mais Popular
+                  Mais vantajoso
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Plano Anual</h4>
                 <div className="text-4xl font-bold text-white mb-2">
@@ -359,7 +359,7 @@ const Template4 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`, '_blank')}
               >
                 Começar Agora
               </button>
