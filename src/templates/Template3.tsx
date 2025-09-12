@@ -85,7 +85,7 @@ const Template3 = () => {
                 </div>
               </div>
             </div>
-
+            
             {/* Right Column - Visual/Demo COM EFEITOS 3D */}
             <div className="relative animate-slide-in-right">
               <img 
@@ -331,7 +331,7 @@ const Template3 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`, '_blank')}
+                onClick={() => window.location.href = `${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`}
               >
                 Começar Agora
               </button>
@@ -359,7 +359,7 @@ const Template3 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`, '_blank')}
+                onClick={() => window.location.href = `${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`}
               >
                 Começar Agora
               </button>
@@ -441,7 +441,7 @@ const Template3 = () => {
           </div>
         </div>
       </section>
-
+      
       <Footer />
     </div>
   );

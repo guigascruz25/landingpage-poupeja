@@ -48,7 +48,7 @@ const Template1 = () => {
               </h2>
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl animate-fade-in-up">
-                Gerencie suas finanças de forma inteligente com nossa plataforma completa.
+                Gerencie suas finanças de forma inteligente com nossa plataforma completa. 
                 Controle total, insights avançados e liberdade financeira garantida.
               </p>
 
@@ -96,107 +96,127 @@ const Template1 = () => {
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20 animate-float"></div>
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-400 rounded-full opacity-30 animate-float-slow"></div>
             </div>
-          </div>
-        </div>
+                    </div>
+                  </div>
       </section>
 
-      {/* Seção de Perguntas Financeiras COM MOVIMENTO */}
-      <section className="py-16 bg-white overflow-hidden">
+      {/* Seção de Perguntas Financeiras COM MOVIMENTO - TELA COMPLETA */}
+      <section className="py-16 bg-blue-900 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pergunte o que quiser sobre suas finanças
             </h3>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto">
               Veja alguns exemplos abaixo.
             </p>
-          </div>
+                    </div>
 
           {/* Linha 1 - Movimento para a esquerda */}
           <div className="scroll-container mb-8">
             <div className="scroll-left flex">
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais contas vencem hoje?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como está meu investimento?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu fluxo de caixa?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu limite de gastos?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto posso economizar?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais despesas fixas tenho?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como está meu score de crédito?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu orçamento mensal?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha meta de economia?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto tenho investido?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais contas vencem hoje?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está meu investimento?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu fluxo de caixa?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu limite de gastos?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto posso economizar?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais despesas fixas tenho?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está meu score de crédito?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu orçamento mensal?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha meta de economia?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto tenho investido?</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais contas vencem hoje?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como está meu investimento?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu fluxo de caixa?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu limite de gastos?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto posso economizar?</button>
-            </div>
-          </div>
-
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais contas vencem hoje?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está meu investimento?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu fluxo de caixa?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu limite de gastos?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto posso economizar?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais despesas fixas tenho?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está meu score de crédito?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu orçamento mensal?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha meta de economia?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto tenho investido?</button>
+                    </div>
+                  </div>
+                  
           {/* Linha 2 - Movimento para a direita */}
           <div className="scroll-container mb-8">
             <div className="scroll-right flex">
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Recebi 5000 reais de salário</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Paguei 800 reais de aluguel</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Investi 1000 reais na poupança</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Gastei 200 reais com combustível</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Paguei 150 reais no supermercado</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Recebi 300 reais de dividendos</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Paguei 500 reais de cartão de crédito</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Investi 2000 reais em ações</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Gastei 100 reais com lazer</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Paguei 400 reais de energia</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Recebi 5000 reais de salário</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 800 reais de aluguel</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Investi 1000 reais na poupança</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Gastei 200 reais com combustível</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 150 reais no supermercado</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Recebi 300 reais de dividendos</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 500 reais de cartão de crédito</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Investi 2000 reais em ações</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Gastei 100 reais com lazer</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 400 reais de energia</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Recebi 5000 reais de salário</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Paguei 800 reais de aluguel</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Investi 1000 reais na poupança</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Gastei 200 reais com combustível</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Paguei 150 reais no supermercado</button>
-            </div>
-          </div>
-
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Recebi 5000 reais de salário</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 800 reais de aluguel</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Investi 1000 reais na poupança</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Gastei 200 reais com combustível</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 150 reais no supermercado</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Recebi 300 reais de dividendos</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 500 reais de cartão de crédito</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Investi 2000 reais em ações</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Gastei 100 reais com lazer</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Paguei 400 reais de energia</button>
+                </div>
+              </div>
+              
           {/* Linha 3 - Movimento para a esquerda */}
           <div className="scroll-container mb-8">
             <div className="scroll-left flex">
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha renda passiva?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais impostos preciso pagar?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como está minha reserva de emergência?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu patrimônio líquido?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto devo no cartão de crédito?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha taxa de poupança?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como está minha aposentadoria?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais investimentos tenho?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu perfil de risco?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como diversificar meus investimentos?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha renda passiva?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais impostos preciso pagar?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está minha reserva de emergência?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu patrimônio líquido?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto devo no cartão de crédito?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha taxa de poupança?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está minha aposentadoria?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais investimentos tenho?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu perfil de risco?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como diversificar meus investimentos?</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha renda passiva?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais impostos preciso pagar?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como está minha reserva de emergência?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual meu patrimônio líquido?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto devo no cartão de crédito?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha renda passiva?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais impostos preciso pagar?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está minha reserva de emergência?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu patrimônio líquido?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto devo no cartão de crédito?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha taxa de poupança?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como está minha aposentadoria?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais investimentos tenho?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual meu perfil de risco?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como diversificar meus investimentos?</button>
             </div>
           </div>
 
           {/* Linha 4 - Movimento para a direita */}
           <div className="scroll-container">
             <div className="scroll-right flex">
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto posso investir este mês?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual a melhor estratégia de investimento?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como reduzir meus gastos?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha capacidade de pagamento?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como planejar minha aposentadoria?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quais são meus gastos desnecessários?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como aumentar minha renda?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual o melhor momento para investir?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como controlar meus impulsos de compra?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha meta financeira para este ano?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto posso investir este mês?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual a melhor estratégia de investimento?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como reduzir meus gastos?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha capacidade de pagamento?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como planejar minha aposentadoria?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais são meus gastos desnecessários?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como aumentar minha renda?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual o melhor momento para investir?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como controlar meus impulsos de compra?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha meta financeira para este ano?</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Quanto posso investir este mês?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual a melhor estratégia de investimento?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como reduzir meus gastos?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Qual minha capacidade de pagamento?</button>
-              <button className="question-button bg-gray-100 text-gray-700 hover:bg-gray-200">Como planejar minha aposentadoria?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quanto posso investir este mês?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual a melhor estratégia de investimento?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como reduzir meus gastos?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha capacidade de pagamento?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como planejar minha aposentadoria?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Quais são meus gastos desnecessários?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como aumentar minha renda?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual o melhor momento para investir?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Como controlar meus impulsos de compra?</button>
+              <button className="question-button bg-white text-blue-900 hover:bg-blue-50">Qual minha meta financeira para este ano?</button>
             </div>
           </div>
         </div>
@@ -309,11 +329,11 @@ const Template1 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`, '_blank')}
+                onClick={() => window.location.href = `${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`}
               >
                 Começar Agora
               </button>
-            </div>
+      </div>
 
             {/* Plano Anual */}
             <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-blue-500 animate-scale-in">
@@ -337,7 +357,7 @@ const Template1 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.open(`${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`, '_blank')}
+                onClick={() => window.location.href = `${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`}
               >
                 Começar Agora
               </button>
@@ -419,7 +439,7 @@ const Template1 = () => {
           </div>
         </div>
       </section>
-
+      
       <Footer />
     </div>
   );
