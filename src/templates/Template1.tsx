@@ -35,8 +35,13 @@ const Template1 = () => {
               <div className="mb-8">
                 <img 
                   src={appConfig.logo_url} 
-                  alt={appConfig.company_name}
-                  className="h-12 md:h-16 mb-6 object-contain animate-fade-in-up"
+                  alt={`${appConfig.company_name} Logo`}
+                  width={appConfig.logo_width}
+                  height={appConfig.logo_height}
+                  className="logo-image"
+                  onError={(e) => {
+                    e.currentTarget.src = appConfig.logo_url_fallback;
+                  }}
                 />
               </div>
 

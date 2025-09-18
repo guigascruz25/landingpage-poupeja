@@ -20,6 +20,23 @@ export interface AppConfig {
   terms_url?: string;
   privacy_url?: string;
   template_variant: string; // Nova variável para template
+  
+  // URLs das Imagens
+  logo_url: string;
+  favicon_url: string;
+  whatsapp_preview_url: string;
+  
+  // URLs Alternativas
+  logo_url_fallback: string;
+  favicon_url_fallback: string;
+  whatsapp_preview_url_fallback: string;
+  
+  // Configurações de Imagem
+  logo_width: number;
+  logo_height: number;
+  favicon_size: number;
+  whatsapp_preview_width: number;
+  whatsapp_preview_height: number;
 }
 
 // Helper function to parse comma-separated string to array
@@ -65,5 +82,22 @@ export const appConfig: AppConfig = {
   app_url: import.meta.env.VITE_APP_URL || "https://app.dominiodoapp.com.br",
   terms_url: import.meta.env.VITE_TERMS_URL || "#",
   privacy_url: import.meta.env.VITE_PRIVACY_URL || "#",
-  template_variant: import.meta.env.VITE_TEMPLATE_VARIANT || "default"
+  template_variant: import.meta.env.VITE_TEMPLATE_VARIANT || "default",
+  
+  // URLs das Imagens
+  logo_url: import.meta.env.VITE_LOGO_URL || "https://via.placeholder.com/200x60/4F46E5/FFFFFF?text=LOGO",
+  favicon_url: import.meta.env.VITE_FAVICON_URL || "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=F",
+  whatsapp_preview_url: import.meta.env.VITE_WHATSAPP_PREVIEW_URL || "https://via.placeholder.com/1200x630/4F46E5/FFFFFF?text=PREVIEW",
+  
+  // URLs Alternativas
+  logo_url_fallback: import.meta.env.VITE_LOGO_URL_FALLBACK || "https://via.placeholder.com/200x60/4F46E5/FFFFFF?text=LOGO",
+  favicon_url_fallback: import.meta.env.VITE_FAVICON_URL_FALLBACK || "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=F",
+  whatsapp_preview_url_fallback: import.meta.env.VITE_WHATSAPP_PREVIEW_URL_FALLBACK || "https://via.placeholder.com/1200x630/4F46E5/FFFFFF?text=PREVIEW",
+  
+  // Configurações de Imagem
+  logo_width: parseInt(import.meta.env.VITE_LOGO_WIDTH || "200"),
+  logo_height: parseInt(import.meta.env.VITE_LOGO_HEIGHT || "60"),
+  favicon_size: parseInt(import.meta.env.VITE_FAVICON_SIZE || "32"),
+  whatsapp_preview_width: parseInt(import.meta.env.VITE_WHATSAPP_PREVIEW_WIDTH || "1200"),
+  whatsapp_preview_height: parseInt(import.meta.env.VITE_WHATSAPP_PREVIEW_HEIGHT || "630"),
 };
