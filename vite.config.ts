@@ -3,6 +3,19 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
+// Plugin para substituir variáveis no index.html
+const htmlEnvPlugin = (env: Record<string, string>) => {
+  return {
+    name: 'html-env',
+    transformIndexHtml(html: string) {
+      return html.replace(/%VITE_(\w+)%/g, (match, key) => {
+        const envKey = `VITE_${key}`;
+        return env[envKey] || match;
+      });
+    }
+  };
+};
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
@@ -13,7 +26,11 @@ export default defineConfig(({ mode }) => {
       host: "::",
       port: 8080,
     },
-    plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+    plugins: [
+      react(), 
+      mode === "development" && componentTagger(),
+      htmlEnvPlugin(env)
+    ].filter(Boolean),
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
@@ -37,6 +54,12 @@ export default defineConfig(({ mode }) => {
       "import.meta.env.VITE_TERMS_URL": JSON.stringify(env.VITE_TERMS_URL),
       "import.meta.env.VITE_PRIVACY_URL": JSON.stringify(env.VITE_PRIVACY_URL),
       "import.meta.env.VITE_TEMPLATE_VARIANT": JSON.stringify(env.VITE_TEMPLATE_VARIANT),
+      "import.meta.env.VITE_WHATSAPP_PREVIEW_URL": JSON.stringify(env.VITE_WHATSAPP_PREVIEW_URL),
+      "import.meta.env.VITE_LOGO_WIDTH": JSON.stringify(env.VITE_LOGO_WIDTH),
+      "import.meta.env.VITE_LOGO_HEIGHT": JSON.stringify(env.VITE_LOGO_HEIGHT),
+      "import.meta.env.VITE_FAVICON_SIZE": JSON.stringify(env.VITE_FAVICON_SIZE),
+      "import.meta.env.VITE_WHATSAPP_PREVIEW_WIDTH": JSON.stringify(env.VITE_WHATSAPP_PREVIEW_WIDTH),
+      "import.meta.env.VITE_WHATSAPP_PREVIEW_HEIGHT": JSON.stringify(env.VITE_WHATSAPP_PREVIEW_HEIGHT),
     },
   };
 });
