@@ -1,19 +1,12 @@
-﻿# Dockerfile para Landing Page Vite + React
-FROM node:18-alpine as builder
+﻿FROM node:18-alpine AS builder
 
-# Definir diretório de trabalho
 WORKDIR /app
 
-# Copiar package.json e package-lock.json
 COPY package*.json ./
+RUN npm ci
 
-# Instalar dependências
-RUN npm ci --only=production
-
-# Copiar código fonte
 COPY . .
 
-# Build da aplicação com variáveis de ambiente
 ARG VITE_COMPANY_NAME
 ARG VITE_PAGE_TITLE
 ARG VITE_PAGE_DESCRIPTION
@@ -37,7 +30,6 @@ ARG VITE_FAVICON_SIZE
 ARG VITE_WHATSAPP_PREVIEW_WIDTH
 ARG VITE_WHATSAPP_PREVIEW_HEIGHT
 
-# Definir variáveis de ambiente
 ENV VITE_COMPANY_NAME=$VITE_COMPANY_NAME
 ENV VITE_PAGE_TITLE=$VITE_PAGE_TITLE
 ENV VITE_PAGE_DESCRIPTION=$VITE_PAGE_DESCRIPTION
@@ -61,20 +53,13 @@ ENV VITE_FAVICON_SIZE=$VITE_FAVICON_SIZE
 ENV VITE_WHATSAPP_PREVIEW_WIDTH=$VITE_WHATSAPP_PREVIEW_WIDTH
 ENV VITE_WHATSAPP_PREVIEW_HEIGHT=$VITE_WHATSAPP_PREVIEW_HEIGHT
 
-# Build da aplicação
 RUN npm run build
 
-# Estágio de produção com Nginx
 FROM nginx:alpine
 
-# Copiar arquivos buildados
 COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Copiar configuração customizada do Nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expor porta 80
 EXPOSE 80
 
-# Comando para iniciar o Nginx
 CMD ["nginx", "-g", "daemon off;"]
