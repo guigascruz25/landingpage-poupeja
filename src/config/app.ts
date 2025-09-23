@@ -19,11 +19,9 @@ export interface AppConfig {
   app_url: string;
   terms_url?: string;
   privacy_url?: string;
-  template_variant: string; // Nova variável para template
+  template_variant: string;
   
   // URLs das Imagens
-  logo_url: string;
-  favicon_url: string;
   whatsapp_preview_url: string;
   
   // URLs Alternativas
@@ -85,8 +83,6 @@ export const appConfig: AppConfig = {
   template_variant: import.meta.env.VITE_TEMPLATE_VARIANT || "default",
   
   // URLs das Imagens
-  logo_url: import.meta.env.VITE_LOGO_URL || "https://via.placeholder.com/200x60/4F46E5/FFFFFF?text=LOGO",
-  favicon_url: import.meta.env.VITE_FAVICON_URL || "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=F",
   whatsapp_preview_url: import.meta.env.VITE_WHATSAPP_PREVIEW_URL || "https://via.placeholder.com/1200x630/4F46E5/FFFFFF?text=PREVIEW",
   
   // URLs Alternativas
