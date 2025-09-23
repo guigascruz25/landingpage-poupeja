@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node cache-bust.cjs && vite build",
     "build:dev": "vite build --mode development",
+    "build:nocache": "vite build",
+    "cache-bust": "node cache-bust.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

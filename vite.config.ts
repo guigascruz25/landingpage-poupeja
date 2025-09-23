@@ -26,6 +26,20 @@ export default defineConfig(({ mode }) => {
       host: "::",
       port: 8080,
     },
+    build: {
+      // Habilitar cache busting automático com hash nos arquivos
+      rollupOptions: {
+        output: {
+          // Adicionar hash aos chunks para cache busting
+          chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js',
+          assetFileNames: 'assets/[name].[hash].[ext]'
+        }
+      },
+      // Configurações para melhor cache busting
+      sourcemap: false,
+      minify: 'terser',
+    },
     plugins: [
       react(), 
       mode === "development" && componentTagger(),
