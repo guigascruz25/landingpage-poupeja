@@ -1,4 +1,4 @@
-﻿import DynamicHead from "@/components/DynamicHead";
+import DynamicHead from "@/components/DynamicHead";
 import Footer from "@/components/Footer";
 import { getTheme } from "@/config/themes";
 import { appConfig } from "@/config/app";
@@ -331,7 +331,7 @@ const Template3 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.location.href = `${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_monthly}&planType=monthly`}
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=monthly`}
               >
                 Começar Agora
               </button>
@@ -359,7 +359,7 @@ const Template3 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.location.href = `${appConfig.app_url}/register?priceId=${appConfig.stripe_price_id_annual}&planType=annual`}
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=annual`}
               >
                 Começar Agora
               </button>

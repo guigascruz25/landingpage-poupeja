@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { appConfig } from "@/config/app";
 
 const Pricing = () => {
-  const generatePlanUrl = (priceId: string, planType: string) => {
-    return `${appConfig.app_url}/register?priceId=${priceId}&planType=${planType}`;
+  const generatePlanUrl = (planType: string) => {
+    return `${appConfig.app_url}/auth?mode=register&planType=${planType}`;
   };
 
   return (
@@ -42,7 +42,7 @@ const Pricing = () => {
             <Button 
               className="w-full" 
               size="lg"
-              onClick={() => window.open(generatePlanUrl(appConfig.stripe_price_id_monthly, 'monthly'), '_blank')}
+              onClick={() => window.open(generatePlanUrl('monthly'), '_blank')}
             >
               Começar Plano Mensal
             </Button>
@@ -81,7 +81,7 @@ const Pricing = () => {
             <Button 
               className="w-full bg-gradient-primary hover:opacity-90" 
               size="lg"
-              onClick={() => window.open(generatePlanUrl(appConfig.stripe_price_id_annual, 'annual'), '_blank')}
+              onClick={() => window.open(generatePlanUrl('annual'), '_blank')}
             >
               Começar Plano Anual
             </Button>
