@@ -26,13 +26,13 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">
             O que nossos usuários dizem
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Histórias reais de pessoas que transformaram suas vidas financeiras
           </p>
         </div>
@@ -41,30 +41,30 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-border/50"
+              className="bg-card rounded-2xl p-10 shadow-md hover:shadow-xl transition-all duration-300 border border-border/40 hover:border-primary/20 hover:-translate-y-1"
             >
               {/* Rating Stars */}
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1 mb-8">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" strokeWidth={0} />
                 ))}
               </div>
 
               {/* Content */}
-              <blockquote className="text-card-foreground mb-6 leading-relaxed">
+              <blockquote className="text-card-foreground mb-8 leading-relaxed text-[15px]">
                 "{testimonial.content}"
               </blockquote>
 
               {/* User Info */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">
+                <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center shadow-md">
+                  <span className="text-white font-bold text-base">
                     {testimonial.avatar}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-card-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="font-semibold text-card-foreground tracking-tight">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground mt-0.5">{testimonial.role}</p>
                 </div>
               </div>
             </div>

@@ -31,13 +31,13 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">
             Por que escolher o <span className="text-primary">{appConfig.company_name}</span>?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Descubra como nossa plataforma pode revolucionar o modo como você gerencia suas finanças
           </p>
         </div>
@@ -48,19 +48,19 @@ const Benefits = () => {
             return (
               <div 
                 key={index}
-                className="group bg-card p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border/50"
+                className="group bg-card p-10 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/40 hover:border-primary/20"
               >
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="w-8 h-8 text-white" />
+                <div className="mb-8">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-lg">
+                    <IconComponent className="w-8 h-8 text-white" strokeWidth={2.5} />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4 tracking-tight">
                   {benefit.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-[15px]">
                   {benefit.description}
                 </p>
               </div>

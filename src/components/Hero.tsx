@@ -15,10 +15,10 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Animated background shapes */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-75"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-150"></div>
+      <div className="absolute inset-0 opacity-[0.07]">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float-slow"></div>
+        <div className="absolute top-40 right-10 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -50,25 +50,25 @@ const Hero = () => {
         </div>
 
         {/* Main Headline */}
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight tracking-tight">
           A ferramenta completa para
-          <span className="block bg-white text-primary px-4 py-2 rounded-2xl inline-block mt-2">
+          <span className="block bg-white text-primary px-6 py-3 rounded-2xl inline-block mt-3 shadow-xl">
             controlar suas finanças
           </span>
         </h2>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
           Gerencie receitas e despesas pelo App ou WhatsApp e alcance a liberdade 
           financeira que você sempre sonhou.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
           <Button 
             variant="hero-primary" 
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto text-base font-semibold px-10 py-6 h-auto rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
           >
             Acessar App
@@ -76,7 +76,7 @@ const Hero = () => {
           <Button 
             variant="hero-secondary" 
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto text-base font-semibold px-10 py-6 h-auto rounded-xl transition-all duration-300 hover:scale-[1.02]"
             onClick={scrollToPlans}
           >
             Cadastre-se agora
