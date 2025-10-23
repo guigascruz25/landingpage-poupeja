@@ -20,87 +20,100 @@ const Template1 = () => {
     } as React.CSSProperties}>
       <DynamicHead />
       
-      {/* Hero Section - Dark Theme COM EFEITOS */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#151a21' }}>
-        {/* Background Elements COM ANIMAÇÃO */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="floating-element absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
-          <div className="floating-element absolute bottom-20 right-20 w-80 h-80 bg-primary/10 rounded-full blur-2xl"></div>
-          <div className="floating-element absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-xl"></div>
+      {/* Hero Section - Modern Dark Design */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ backgroundColor: '#151a21' }}>
+        {/* Subtle Background Glow */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"></div>
         </div>
         
-        <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
-            {/* Left Column - Content COM ANIMAÇÕES */}
-            <div className="text-left animate-slide-in-left">
-              <div className="mb-8">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Content */}
+            <div className="text-left space-y-8">
+              {/* Logo */}
+              <div className="mb-4">
                 <img 
                   src={appConfig.logo_url} 
                   alt={`${appConfig.company_name} Logo`}
                   width={appConfig.logo_width}
                   height={appConfig.logo_height}
-                  className="logo-image"
+                  className="h-10 w-auto"
                   onError={(e) => {
                     e.currentTarget.src = appConfig.logo_url_fallback;
                   }}
                 />
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight animate-fade-in-up">
-                A plataforma financeira
-                <span className="block text-primary mt-3">
-                  mais completa do Brasil
-                </span>
-              </h2>
-              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl animate-fade-in-up">
-                Gerencie suas finanças de forma inteligente com nossa plataforma completa. 
-                Controle total, insights avançados e liberdade financeira garantida.
-              </p>
-              {/* CTA Buttons COM EFEITOS */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 mb-12 animate-scale-in">
-                <button 
-                  className="px-10 py-4 bg-primary hover:bg-primary-dark text-white rounded-xl font-semibold text-base transition-all duration-300 ease-out transform hover:scale-[1.02] shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#151a21]"
-                  onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Começar Agora
-                </button>
-                <button 
-                  className="px-10 py-4 bg-white/10 text-white border-2 border-primary hover:bg-primary/20 rounded-xl font-semibold text-base transition-all duration-300 ease-out transform hover:scale-[1.02] shadow-lg hover:shadow-xl backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#151a21]"
-                  onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Ver Planos
-                </button>
-              </div>
-              
-               {/* Trust Indicators COM ANIMAÇÃO */}
-               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 animate-fade-in-up">
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                   <span>+50.000 usuários ativos</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                   <span>99.9% uptime</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                   <span>Seguro e confiável</span>
-                 </div>
-               </div>
-             </div>
 
-             {/* Right Column - Visual/Demo COM EFEITOS 3D */}
-             <div className="relative animate-slide-in-right">
-               <img 
-                 src="/imagens/app-dashboard.png" 
-                 alt="Dashboard do App Poupe Já"
-                 className="w-[500px] h-auto mx-auto drop-shadow-2xl rounded-xl"
-               />
-               {/* Floating Elements */}
-               <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary rounded-full opacity-20 animate-float"></div>
-               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary rounded-full opacity-30 animate-float-slow"></div>
-             </div>
-                    </div>
-                  </div>
+              {/* Main Heading */}
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                Controle suas finanças que{' '}
+                <span className="bg-gradient-to-r from-primary via-primary to-emerald-400 bg-clip-text text-transparent">
+                  convertem
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl">
+                Aprenda com mais de 100+ exemplos selecionados de empresas que criam 
+                controles financeiros envolventes e compartilháveis que não apenas 
+                aumentam a consciência, mas também convertem clientes.
+              </p>
+
+              {/* Email Capture Form */}
+              <div className="space-y-4 max-w-xl">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    placeholder="seu.email@exemplo.com"
+                    className="flex-1 px-6 py-4 bg-[#1a2028] text-white border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-gray-500"
+                  />
+                  <button 
+                    className="px-8 py-4 bg-gradient-to-r from-primary to-emerald-500 hover:from-emerald-500 hover:to-primary text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-primary/20"
+                    onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    Começar Grátis
+                  </button>
+                </div>
+                <p className="text-sm text-gray-500">
+                  Acesso gratuito • Sem cartão de crédito • 100+ recursos
+                </p>
+              </div>
+
+              {/* Social Proof / Testimonial */}
+              <div className="flex items-start gap-4 pt-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm italic mb-2">
+                    "Estou prestes a lançar um novo produto e precisava de inspiração para 
+                    criar nosso vídeo de lançamento. Este site tem sido um recurso incrível para nós."
+                  </p>
+                  <p className="text-white text-sm font-medium">
+                    Alex Silva, fundador da <span className="text-primary">FinTech Brasil</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Visual */}
+            <div className="relative lg:block hidden">
+              <div className="relative">
+                <img 
+                  src="/imagens/app-dashboard.png" 
+                  alt="Dashboard do App Poupe Já"
+                  className="w-full h-auto rounded-2xl shadow-2xl shadow-primary/10"
+                />
+                {/* Decorative gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Seção de Perguntas Financeiras COM MOVIMENTO - TELA COMPLETA */}
