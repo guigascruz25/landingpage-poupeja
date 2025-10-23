@@ -33,7 +33,10 @@ const Hero = () => {
               onError={(e) => {
                 // Fallback para texto se a imagem não carregar
                 e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling.style.display = 'block';
+                const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                if (nextElement) {
+                  nextElement.style.display = 'block';
+                }
               }}
             />
             <h1 

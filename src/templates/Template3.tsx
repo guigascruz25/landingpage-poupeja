@@ -17,7 +17,7 @@ const Template3 = () => {
       '--muted': theme.muted,
       '--card-background': theme.cardBackground,
       '--border-color': theme.borderColor
-    }}>
+    } as React.CSSProperties}>
       <DynamicHead />
       
       {/* Hero Section - Roxo Elegante COM EFEITOS */}
