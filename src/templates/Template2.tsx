@@ -55,7 +55,7 @@ const Template2 = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-scale-in">
                 <button 
                   className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-glow"
-                  onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+                  onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Começar Agora
                 </button>
@@ -405,7 +405,7 @@ const Template2 = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
             <button 
               className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-glow"
-              onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+              onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Começar Agora
             </button>

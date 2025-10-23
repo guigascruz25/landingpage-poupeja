@@ -20,7 +20,7 @@ const Template1 = () => {
       <DynamicHead />
       
       {/* Hero Section - Azul Profissional COM EFEITOS */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden animate-gradient">
+      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-blue-50 via-white to-blue-50 overflow-hidden">
         {/* Background Elements COM ANIMAÇÃO */}
         <div className="absolute inset-0">
           <div className="floating-element absolute top-20 left-20 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl"></div>
@@ -28,8 +28,8 @@ const Template1 = () => {
           <div className="floating-element absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-300/10 rounded-full blur-xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 md:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
             {/* Left Column - Content COM ANIMAÇÕES */}
             <div className="text-left animate-slide-in-left">
               <div className="mb-8">
@@ -44,63 +44,60 @@ const Template1 = () => {
                   }}
                 />
               </div>
-
               <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up">
                 A plataforma financeira
                 <span className="block text-blue-600 mt-2 text-glow-blue">
                   mais completa do Brasil
                 </span>
               </h2>
-
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl animate-fade-in-up">
                 Gerencie suas finanças de forma inteligente com nossa plataforma completa. 
                 Controle total, insights avançados e liberdade financeira garantida.
               </p>
-
               {/* CTA Buttons COM EFEITOS */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-scale-in">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 mb-12 animate-scale-in">
                 <button 
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-glow"
-                  onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 ease-out transform hover:scale-[1.02] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                  onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Começar Agora
                 </button>
                 <button 
-                  className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
+                  className="px-8 py-4 bg-white text-blue-700 border-2 border-blue-600 hover:bg-blue-50 rounded-xl font-semibold text-lg transition-all duration-300 ease-out transform hover:scale-[1.02] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                   onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Ver Planos
                 </button>
               </div>
+              
+               {/* Trust Indicators COM ANIMAÇÃO */}
+               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 animate-fade-in-up">
+                 <div className="flex items-center gap-2">
+                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                   <span>+50.000 usuários ativos</span>
+                 </div>
+                 <div className="flex items-center gap-2">
+                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                   <span>99.9% uptime</span>
+                 </div>
+                 <div className="flex items-center gap-2">
+                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                   <span>Seguro e confiável</span>
+                 </div>
+               </div>
+             </div>
 
-              {/* Trust Indicators COM ANIMAÇÃO */}
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 animate-fade-in-up">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>+50.000 usuários ativos</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>99.9% uptime</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>Seguro e confiável</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Visual/Demo COM EFEITOS 3D */}
-            <div className="relative animate-slide-in-right">
-              <img 
-                src="/imagens/app-dashboard.png" 
-                alt="Dashboard do App Poupe Já"
-                className="w-[500px] h-auto mx-auto drop-shadow-2xl"
-              />
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20 animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-400 rounded-full opacity-30 animate-float-slow"></div>
-            </div>
+             {/* Right Column - Visual/Demo COM EFEITOS 3D */}
+             <div className="relative animate-slide-in-right">
+               <img 
+                 src="/imagens/app-dashboard.png" 
+                 alt="Dashboard do App Poupe Já"
+                 className="w-[500px] h-auto mx-auto drop-shadow-2xl rounded-xl shadow-sm"
+               />
+               {/* Floating Elements */}
+               <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20 animate-float"></div>
+               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-400 rounded-full opacity-30 animate-float-slow"></div>
+             </div>
                     </div>
                   </div>
       </section>
@@ -431,7 +428,7 @@ const Template1 = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
             <button 
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-glow"
-              onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+              onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Começar Agora
             </button>
