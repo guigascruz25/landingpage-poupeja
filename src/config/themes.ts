@@ -30,18 +30,18 @@ export const themes: Record<string, ThemeConfig> = {
     borderColor: "border-blue-200"
   },
   template2: {
-    name: "Verde Moderno",
-    primary: "#059669", // emerald-600
-    secondary: "#047857", // emerald-700
-    accent: "#10b981", // emerald-500
+    name: "Emerald Luxury",
+    primary: "#10b981", // emerald-500 - vibrant
+    secondary: "#059669", // emerald-600 - rich
+    accent: "#34d399", // emerald-400 - bright
     background: "#ffffff",
-    foreground: "#1f2937",
-    muted: "#f0fdf4",
-    heroGradient: "from-emerald-600 via-emerald-700 to-emerald-800",
-    buttonPrimary: "bg-emerald-600 hover:bg-emerald-700",
-    buttonSecondary: "bg-white text-emerald-600 border-emerald-600 hover:bg-emerald-50",
+    foreground: "#111827",
+    muted: "#ecfdf5",
+    heroGradient: "from-emerald-500 via-emerald-600 to-teal-600",
+    buttonPrimary: "bg-emerald-500 hover:bg-emerald-600",
+    buttonSecondary: "bg-white text-emerald-600 border-emerald-400 hover:bg-emerald-50",
     cardBackground: "bg-white",
-    borderColor: "border-emerald-200"
+    borderColor: "border-emerald-300"
   },
   template3: {
     name: "Roxo Elegante",

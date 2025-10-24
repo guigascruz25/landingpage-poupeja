@@ -125,6 +125,24 @@ All colors MUST be HSL.
   }
 }
 
+/* Emerald Luxury Premium Shadows */
+:root {
+  --shadow-emerald-sm: 0 2px 8px rgba(16, 185, 129, 0.15);
+  --shadow-emerald-md: 0 4px 16px rgba(16, 185, 129, 0.2);
+  --shadow-emerald-lg: 0 8px 32px rgba(16, 185, 129, 0.25);
+  --shadow-emerald-xl: 0 16px 48px rgba(16, 185, 129, 0.3);
+  --shadow-emerald-glow: 0 0 40px rgba(16, 185, 129, 0.4);
+}
+
+/* Emerald Luxury Premium Shadows */
+:root {
+  --shadow-emerald-sm: 0 2px 8px rgba(16, 185, 129, 0.15);
+  --shadow-emerald-md: 0 4px 16px rgba(16, 185, 129, 0.2);
+  --shadow-emerald-lg: 0 8px 32px rgba(16, 185, 129, 0.25);
+  --shadow-emerald-xl: 0 16px 48px rgba(16, 185, 129, 0.3);
+  --shadow-emerald-glow: 0 0 40px rgba(16, 185, 129, 0.4);
+}
+
 /* ===== EFEITOS VISUAIS PARA TEMPLATES ===== */
 
 /* Animações de entrada */
@@ -441,54 +459,72 @@ All colors MUST be HSL.
 
 /* ===== ANIMAÇÕES DE MOVIMENTO CONTÍNUO CORRIGIDAS ===== */
 
-/* Movimento para a esquerda - sempre visível */
+/* Continuous Scrolling Animations */
 @keyframes scroll-left {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
   }
 }
 
-/* Movimento para a direita - sempre visível */
 @keyframes scroll-right {
   0% {
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
+  }
+}
+
+/* Emerald Luxury Custom Animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes scale-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer-effect {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
   }
 }
 
 /* Classes para movimento contínuo */
-.scroll-left {
-  animation: scroll-left 20s linear infinite;
-}
-
-.scroll-right {
-  animation: scroll-right 20s linear infinite;
-}
-
-/* Container para overflow hidden */
-.scroll-container {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-}
-
-/* Carrossel de perguntas - Tela completa */
-.scroll-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .scroll-left {
   display: inline-flex;
   animation: scroll-left 30s linear infinite;
@@ -503,82 +539,74 @@ All colors MUST be HSL.
   padding: 0 1rem;
 }
 
-.question-button {
-  flex-shrink: 0;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+/* Container para overflow hidden */
+.scroll-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
   white-space: nowrap;
-  min-width: max-content;
 }
 
-/* Animações de scroll otimizadas */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* Responsividade para diferentes tamanhos de tela */
-@media (max-width: 640px) {
-  .question-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
-  }
-  
-  .scroll-left,
-  .scroll-right {
-    gap: 0.5rem;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-  .question-button {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.8125rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .question-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-  }
-}
-
-/* Estilo dos botões de pergunta */
 .question-button {
-  display: inline-block;
-  background: #f3f4f6;
-  color: #374151;
-  padding: 12px 24px;
-  margin: 0 12px;
-  border-radius: 50px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   flex-shrink: 0;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+  .question-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+  }
 }
 
 .question-button:hover {
-  background: #e5e7eb;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-emerald-md);
+}
+
+/* Emerald Luxury Utility Classes */
+.shadow-emerald-sm { box-shadow: var(--shadow-emerald-sm); }
+.shadow-emerald-md { box-shadow: var(--shadow-emerald-md); }
+.shadow-emerald-lg { box-shadow: var(--shadow-emerald-lg); }
+.shadow-emerald-xl { box-shadow: var(--shadow-emerald-xl); }
+.shadow-emerald-glow { box-shadow: var(--shadow-emerald-glow); }
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-scale-bounce {
+  animation: scale-bounce 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer-effect 2s linear infinite;
 }
