@@ -2,13 +2,14 @@ import DynamicHead from "@/components/DynamicHead";
 import Footer from "@/components/Footer";
 import { getTheme } from "@/config/themes";
 import { appConfig } from "@/config/app";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
-// Template3 - Roxo Elegante COMPLETO E INDEPENDENTE COM EFEITOS
+// Template3 - Design Moderno Azul Black
 const Template3 = () => {
   const theme = getTheme("template3");
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900" style={{ 
+    <div className="min-h-screen bg-slate-900 text-white" style={{
       '--primary': theme.primary,
       '--secondary': theme.secondary,
       '--accent': theme.accent,
@@ -20,95 +21,90 @@ const Template3 = () => {
     } as React.CSSProperties}>
       <DynamicHead />
       
-      {/* Hero Section - Roxo Elegante COM EFEITOS */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 overflow-hidden animate-gradient">
-        {/* Background Elements COM ANIMAÇÃO */}
-        <div className="absolute inset-0">
-          <div className="floating-element absolute top-20 left-20 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
-          <div className="floating-element absolute bottom-20 right-20 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
-          <div className="floating-element absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-200/10 rounded-full blur-2xl"></div>
-        </div>
+      {/* Hero Section - Design Moderno */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Fundo animado */}
+        <AnimatedBackground />
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content COM ANIMAÇÕES */}
-            <div className="text-left animate-slide-in-left">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Content */}
+            <div className="text-left">
               <div className="mb-8">
                 <img 
                   src={appConfig.logo_url} 
                   alt={appConfig.company_name}
-                  className="h-12 md:h-16 mb-6 object-contain animate-fade-in-up"
+                  className="h-12 md:h-16 mb-8 object-contain animate-fade-in-up delay-100"
                 />
               </div>
 
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
-                Transforme suas finanças com
-                <span className="block mt-2 bg-gradient-to-r from-purple-400 to-purple-500 bg-clip-text text-transparent text-glow-purple">
-                  elegância e precisão
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                <span className="block">
+                  Transforme suas finanças com
                 </span>
-              </h2>
+                <span className="block mt-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent animate-gradient-flow">
+                  seu assistente moderno e elegante
+                </span>
+              </h1>
 
-              <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-2xl animate-fade-in-up">
+              <p className="text-xl text-slate-300 mb-12 leading-relaxed max-w-2xl animate-stagger-fade delay-900 hero-text">
                 A plataforma mais sofisticada e intuitiva para gerenciar suas finanças.
                 Controle total, insights avançados e liberdade financeira garantida.
               </p>
 
-              {/* CTA Buttons COM EFEITOS */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-scale-in">
-                <button 
-                  className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-glow"
-                  onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-stagger-fade delay-1200">
+                <a 
+                  href="#plans" 
+                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse-glow"
                 >
-                  Começar Agora
-                </button>
-                <button 
-                  className="px-8 py-4 bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-50 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
-                  onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
+                  Conhecer planos
+                </a>
+                <a 
+                  href="#demo" 
+                  className="inline-flex items-center justify-center px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 rounded-lg font-semibold text-lg transition-all duration-200"
                 >
-                  Ver Planos
-                </button>
+                  Ver demonstração
+                </a>
               </div>
 
-              {/* Trust Indicators COM ANIMAÇÃO */}
-              <div className="flex flex-wrap items-center gap-6 text-sm text-purple-200 animate-fade-in-up">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap items-center gap-8 text-sm text-slate-400 animate-stagger-fade delay-1400">
+                <div className="flex items-center gap-3 animate-stagger-fade delay-1500">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse-glow"></div>
                   <span>+50.000 usuários ativos</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div className="flex items-center gap-3 animate-stagger-fade delay-1600">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse-glow"></div>
                   <span>99.9% uptime</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div className="flex items-center gap-3 animate-stagger-fade delay-1700">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse-glow"></div>
                   <span>Seguro e confiável</span>
                 </div>
               </div>
             </div>
             
-            {/* Right Column - Visual/Demo COM EFEITOS 3D */}
-            <div className="relative animate-slide-in-right">
+            {/* Right Column - Visual/Demo */}
+            <div className="relative animate-fade-in-scale delay-800">
               <img 
                 src="/imagens/app-dashboard.png" 
                 alt="Dashboard do App Poupe Já"
-                className="w-[500px] h-auto mx-auto drop-shadow-2xl"
+                className="w-full max-w-lg mx-auto drop-shadow-2xl"
               />
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-400 rounded-full opacity-30 animate-float-slow"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Seção de Perguntas Financeiras COM MOVIMENTO */}
-      <section className="py-16 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      {/* Seção de Perguntas Financeiras */}
+      <section className="py-20 bg-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Pergunte o que quiser sobre suas finanças
-            </h3>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            </h2>
+            <p className="text-xl text-slate-400 max-w-4xl mx-auto">
               Veja alguns exemplos abaixo.
             </p>
           </div>
@@ -223,80 +219,84 @@ const Template3 = () => {
         </div>
       </section>
 
-      {/* Features Section - Roxo Elegante COM EFEITOS */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Por que escolher nossa plataforma?</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Tecnologia avançada, segurança máxima e resultados comprovados</p>
+      {/* Features Section */}
+      <section className="py-24 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Por que escolher nossa plataforma?
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Tecnologia avançada, segurança máxima e resultados comprovados
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
-              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 animate-float">
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-200">
+              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
                 <div className="text-2xl">⚡</div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Dashboard Inteligente</h4>
-              <p className="text-gray-600">Visualize todas as suas finanças em um só lugar com insights personalizados.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Alertas Inteligentes</h3>
+              <p className="text-slate-400 leading-relaxed">Notificações sobre limites de gastos, metas, e contas vencendo.</p>
             </div>
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
-              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                <div className="text-2xl"></div>
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-200">
+              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                <div className="text-2xl">🔗</div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Segurança Máxima</h4>
-              <p className="text-gray-600">Criptografia de nível bancário e proteção total dos seus dados.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Conexões Bancárias</h3>
+              <p className="text-slate-400 leading-relaxed">Integração com bancos e cartões para atualização em tempo real.</p>
             </div>
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
-              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                <div className="text-2xl">⚡</div>
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-200">
+              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                <div className="text-2xl">📊</div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Automação Total</h4>
-              <p className="text-gray-600">Configure uma vez e deixe a plataforma trabalhar por você.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Relatórios Visuais</h3>
+              <p className="text-slate-400 leading-relaxed">Gráficos e visuais claros para entender o cenário financeiro.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* App Demo Section - Roxo Elegante COM EFEITOS */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-left">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Controle suas finanças de onde estiver
-              </h3>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+      {/* App Demo Section */}
+      <section id="demo" className="py-24 bg-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Demonstrativo do App
+              </h2>
+              <p className="text-xl text-slate-400 mb-12 leading-relaxed">
                 Acesse sua plataforma financeira de qualquer dispositivo. 
                 Sincronização em tempo real e interface responsiva para máxima comodidade.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-600">Movimentos ilimitados</span>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                  <span className="text-slate-300 text-lg">Movimentos ilimitados</span>
                 </div>
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-600">Dashboard completo</span>
+                <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                  <span className="text-slate-300 text-lg">Dashboard completo</span>
                 </div>
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-600">Todos os relatórios</span>
+                <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                  <span className="text-slate-300 text-lg">Todos os relatórios</span>
                 </div>
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-600">Metas ilimitadas</span>
+                <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                  <span className="text-slate-300 text-lg">Metas ilimitadas</span>
                 </div>
               </div>
             </div>
-            <div className="relative animate-slide-in-right">
+            <div className="relative">
               <img
                 src="/imagens/app-macbook-poupeja.png"
                 alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
-                className="w-[800px] h-auto mx-auto drop-shadow-2xl"
+                className="w-full mx-auto drop-shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg hover-lift">
+              <div className="absolute -bottom-6 -left-6 bg-slate-700 border border-slate-600 p-6 rounded-xl shadow-xl">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-purple-600">+32%</p>
-                  <p className="text-sm text-gray-600">Economia este mês</p>
+                  <div className="text-3xl font-bold text-blue-400 mb-1">4.8</div>
+                  <p className="text-sm text-slate-400">Avaliações médias</p>
                 </div>
               </div>
             </div>
@@ -304,136 +304,146 @@ const Template3 = () => {
         </div>
       </section>
 
-      {/* Pricing Section - Roxo Elegante COM EFEITOS */}
-      <section id="plans" className="py-20 bg-purple-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4">Escolha seu plano</h3>
-            <p className="text-xl text-purple-700 max-w-3xl mx-auto">Planos flexíveis para todos os perfis</p>
+      {/* Pricing Section */}
+      <section id="plans" className="py-24 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Escolha seu plano
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Planos flexíveis para todos os perfis
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Plano Mensal */}
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in">
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
               <div className="text-center mb-8">
-                <h4 className="text-2xl font-bold text-purple-900 mb-2">Plano Mensal</h4>
-                <div className="text-4xl font-bold text-purple-600 mb-2">
+                <h3 className="text-2xl font-bold text-white mb-4">Plano Mensal</h3>
+                <div className="text-5xl font-bold text-blue-400 mb-2">
                   R$ {appConfig.plan_price_monthly}
                 </div>
-                <p className="text-purple-700">por mês</p>
+                <p className="text-slate-400">por mês</p>
               </div>
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_monthly.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 animate-fade-in-up">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                    <span className="text-purple-700">{feature}</span>
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                    <span className="text-slate-300">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
-                className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
+                className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg"
                 onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=monthly`}
               >
-                Começar Agora
+                Começar agora
               </button>
             </div>
 
             {/* Plano Anual */}
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-purple-500 animate-scale-in">
-              <div className="text-center mb-8">
-                <div className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
+            <div className="bg-slate-800 rounded-2xl p-8 border-2 border-blue-600 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full">
                   Mais vantajoso
                 </div>
-                <h4 className="text-2xl font-bold text-purple-900 mb-2">Plano Anual</h4>
-                <div className="text-4xl font-bold text-purple-600 mb-2">
+              </div>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Plano Anual</h3>
+                <div className="text-5xl font-bold text-blue-400 mb-2">
                   R$ {appConfig.plan_price_annual}
                 </div>
-                <p className="text-purple-700">por ano</p>
+                <p className="text-slate-400">por ano</p>
               </div>
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_annual.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 animate-fade-in-up">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                    <span className="text-purple-700">{feature}</span>
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                    <span className="text-slate-300">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
-                className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
+                className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg"
                 onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=annual`}
               >
-                Começar Agora
+                Escolher plano
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section - Roxo Elegante COM EFEITOS */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O que nossos usuários dizem</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Depoimentos reais de quem já usa nossa plataforma</p>
+      {/* Testimonials Section */}
+      <section className="py-24 bg-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Depoimentos
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Depoimentos reais de quem já usa nossa plataforma
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-3d bg-gray-50 rounded-2xl p-8 shadow-lg hover-lift animate-fade-in-up">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4 animate-float">
-                  <span className="text-purple-600 font-bold">M</span>
+            <div className="bg-slate-700 rounded-2xl p-8 border border-slate-600">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                  <div className="text-white font-bold">A</div>
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900">Maria Silva</h5>
-                  <p className="text-sm text-gray-600">Empresária</p>
+                  <p className="font-semibold text-white">Ana</p>
+                  <p className="text-sm text-slate-400">Empreendedora</p>
                 </div>
               </div>
-              <p className="text-gray-600">"Revolucionou minha gestão financeira. Interface intuitiva e funcionalidades incríveis!"</p>
+              <p className="text-slate-300 leading-relaxed">"O app se integrou aos meus bancos e cartões rapidinho."</p>
             </div>
-            <div className="card-3d bg-gray-50 rounded-2xl p-8 shadow-lg hover-lift animate-fade-in-up">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4 animate-float">
-                  <span className="text-purple-600 font-bold">J</span>
+            <div className="bg-slate-700 rounded-2xl p-8 border border-slate-600">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                  <div className="text-white font-bold">B</div>
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900">João Santos</h5>
-                  <p className="text-sm text-gray-600">Investidor</p>
+                  <p className="font-semibold text-white">Bruno</p>
+                  <p className="text-sm text-slate-400">Analista</p>
                 </div>
               </div>
-              <p className="text-gray-600">"Controle total dos investimentos. Relatórios detalhados e insights valiosos."</p>
+              <p className="text-slate-300 leading-relaxed">"Os alertas me ajudam a não estourar os gastos do mês."</p>
             </div>
-            <div className="card-3d bg-gray-50 rounded-2xl p-8 shadow-lg hover-lift animate-fade-in-up">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4 animate-float">
-                  <span className="text-purple-600 font-bold">A</span>
+            <div className="bg-slate-700 rounded-2xl p-8 border border-slate-600">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                  <div className="text-white font-bold">C</div>
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900">Ana Costa</h5>
-                  <p className="text-sm text-gray-600">Freelancer</p>
+                  <p className="font-semibold text-white">Carla</p>
+                  <p className="text-sm text-slate-400">Gestora</p>
                 </div>
               </div>
-              <p className="text-gray-600">"Perfeito para freelancers. Controle de receitas e despesas de forma simples e eficiente."</p>
+              <p className="text-slate-300 leading-relaxed">"Os gráficos são ótimos pra visualizar onde estou gastando."</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section - Roxo Elegante COM EFEITOS */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in-up">
+      {/* Final CTA Section */}
+      <section className="py-24 bg-slate-900">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Pronto para transformar suas finanças?
-          </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+          </h2>
+          <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
             Junte-se a milhares de usuários que já controlam suas finanças com nossa plataforma.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
-            <button 
-              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-glow"
-              onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#plans" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg"
             >
-              Começar Agora
-            </button>
+              Começar agora
+            </a>
             <button 
-              className="px-8 py-4 bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-50 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
+              className="inline-flex items-center justify-center px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 rounded-lg font-semibold text-lg transition-all duration-200"
               onClick={() => window.open(`https://wa.me/${appConfig.support_whatsapp.replace(/\D/g, '')}`, '_blank')}
             >
               Falar no WhatsApp
