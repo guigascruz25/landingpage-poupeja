@@ -1,16 +1,15 @@
-// Atualização do Template1.tsx com efeitos visuais
 import DynamicHead from "@/components/DynamicHead";
 import Footer from "@/components/Footer";
 import { getTheme } from "@/config/themes";
 import { appConfig } from "@/config/app";
+import { Sparkles, MessageCircle, Zap, Shield, Cpu, Check, TrendingUp, Star, Quote } from "lucide-react";
 
-// Template1 - Azul Profissional COMPLETO E INDEPENDENTE COM EFEITOS
+// Template1 - Laranja Moderno COMPLETO E INDEPENDENTE COM EFEITOS
 const Template1 = () => {
   const theme = getTheme("template1");
 
   return (
-    <div className="min-h-screen text-white" style={{ 
-      backgroundColor: '#151a21',
+    <div className="min-h-screen bg-gray-50 text-gray-900" style={{ 
       '--primary': theme.primary,
       '--secondary': theme.secondary,
       '--accent': theme.accent,
@@ -20,347 +19,332 @@ const Template1 = () => {
     } as React.CSSProperties}>
       <DynamicHead />
       
-      {/* Hero Section - Dark Theme COM EFEITOS */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#151a21' }}>
-        {/* Background Elements COM ANIMAÇÃO */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="floating-element absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
-          <div className="floating-element absolute bottom-20 right-20 w-80 h-80 bg-primary/10 rounded-full blur-2xl"></div>
-          <div className="floating-element absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-xl"></div>
+      {/* Hero Section - Orange Luxury */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 overflow-hidden animate-gradient-shift">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="floating-element absolute top-20 left-20 w-96 h-96 bg-orange-300/30 rounded-full blur-3xl animate-float-gentle"></div>
+          <div className="floating-element absolute bottom-20 right-20 w-96 h-96 bg-amber-400/25 rounded-full blur-3xl animate-float-gentle"></div>
+          <Sparkles className="absolute top-40 right-1/4 w-8 h-8 text-orange-200/40 animate-pulse" />
+          <Sparkles className="absolute bottom-40 left-1/3 w-6 h-6 text-orange-300/30 animate-pulse" />
         </div>
         
-        <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content COM ANIMAÇÕES */}
             <div className="text-left animate-slide-in-left">
               <div className="mb-8">
                 <img 
                   src={appConfig.logo_url} 
-                  alt={`${appConfig.company_name} Logo`}
-                  width={appConfig.logo_width}
-                  height={appConfig.logo_height}
-                  className="logo-image"
-                  onError={(e) => {
-                    e.currentTarget.src = appConfig.logo_url_fallback;
-                  }}
+                  alt={appConfig.company_name}
+                  className="h-12 md:h-16 mb-6 object-contain animate-fade-in-up"
                 />
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight animate-fade-in-up">
-                A plataforma financeira
-                <span className="block text-primary mt-3">
-                  mais completa do Brasil
+
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up tracking-tight">
+                Controle suas finanças com
+                <span className="block mt-3 bg-gradient-to-r from-orange-200 via-orange-100 to-amber-200 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(255,145,0,0.5)] text-[1.1em] tracking-tighter">
+                  inteligência e simplicidade
                 </span>
               </h2>
-              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl animate-fade-in-up">
-                Gerencie suas finanças de forma inteligente com nossa plataforma completa. 
+
+              <p className="text-xl md:text-2xl text-orange-50/90 mb-8 leading-relaxed max-w-2xl animate-fade-in-up font-light">
+                A plataforma mais sofisticada e intuitiva para gerenciar suas finanças.
                 Controle total, insights avançados e liberdade financeira garantida.
               </p>
-              {/* CTA Buttons COM EFEITOS */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 mb-12 animate-scale-in">
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-scale-in">
                 <button 
-                  className="px-10 py-4 bg-primary hover:bg-primary-dark text-white rounded-xl font-semibold text-base transition-all duration-300 ease-out transform hover:scale-[1.02] shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#151a21]"
+                  className="px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-orange-lg hover:shadow-orange-xl"
                   onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Começar Agora
                 </button>
                 <button 
-                  className="px-10 py-4 bg-white/10 text-white border-2 border-primary hover:bg-primary/20 rounded-xl font-semibold text-base transition-all duration-300 ease-out transform hover:scale-[1.02] shadow-lg hover:shadow-xl backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#151a21]"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white/20 hover:border-white/50 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
                   onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Ver Planos
                 </button>
               </div>
-              
-               {/* Trust Indicators COM ANIMAÇÃO */}
-               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 animate-fade-in-up">
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                   <span>+50.000 usuários ativos</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                   <span>99.9% uptime</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                   <span>Seguro e confiável</span>
-                 </div>
-               </div>
-             </div>
 
-             {/* Right Column - Visual/Demo COM EFEITOS 3D */}
-             <div className="relative animate-slide-in-right">
+              {/* Trust Indicators COM ANIMAÇÃO */}
+              <div className="flex flex-wrap items-center gap-6 text-sm text-orange-200 animate-fade-in-up">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <span>+50.000 usuários ativos</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <span>99.9% uptime</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <span>Seguro e confiável</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Visual/Demo COM EFEITOS 3D */}
+            <div className="relative animate-slide-in-right">
               <img 
                 src="/imagens/app-dashboard.png" 
                 alt="Dashboard do App Poupe Já"
-                className="w-[500px] h-auto mx-auto drop-shadow-2xl rounded-xl"
+                className="w-[500px] h-auto mx-auto drop-shadow-2xl"
               />
-               {/* Floating Elements */}
-               <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary rounded-full opacity-20 animate-float"></div>
-               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary rounded-full opacity-30 animate-float-slow"></div>
-             </div>
-                    </div>
-                  </div>
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full opacity-20 animate-float"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-400 rounded-full opacity-30 animate-float-slow"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Seção de Perguntas Financeiras COM MOVIMENTO - TELA COMPLETA */}
-      <section className="py-20 overflow-hidden" style={{ backgroundColor: '#1a2028' }}>
+      {/* Seção de Perguntas Financeiras COM MOVIMENTO */}
+      <section className="py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-5 tracking-tight">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Pergunte o que quiser sobre suas finanças
             </h3>
-            <p className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Veja alguns exemplos abaixo.
             </p>
-                    </div>
+          </div>
 
           {/* Linha 1 - Movimento para a esquerda */}
           <div className="scroll-container mb-8">
             <div className="scroll-left flex">
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais contas vencem hoje?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está meu investimento?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu fluxo de caixa?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu limite de gastos?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto posso economizar?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais despesas fixas tenho?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está meu score de crédito?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu orçamento mensal?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha meta de economia?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto tenho investido?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quais contas vencem hoje?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como está meu investimento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu fluxo de caixa?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu limite de gastos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto posso economizar?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quais despesas fixas tenho?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como está meu score de crédito?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu orçamento mensal?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha meta de economia?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto tenho investido?</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais contas vencem hoje?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está meu investimento?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu fluxo de caixa?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu limite de gastos?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto posso economizar?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais despesas fixas tenho?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está meu score de crédito?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu orçamento mensal?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha meta de economia?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto tenho investido?</button>
-                    </div>
-                  </div>
-                  
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quais contas vencem hoje?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como está meu investimento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu fluxo de caixa?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu limite de gastos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto posso economizar?</button>
+            </div>
+          </div>
+
           {/* Linha 2 - Movimento para a direita */}
           <div className="scroll-container mb-8">
             <div className="scroll-right flex">
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Recebi 5000 reais de salário</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 800 reais de aluguel</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Investi 1000 reais na poupança</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Gastei 200 reais com combustível</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 150 reais no supermercado</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Recebi 300 reais de dividendos</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 500 reais de cartão de crédito</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Investi 2000 reais em ações</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Gastei 100 reais com lazer</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 400 reais de energia</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Recebi 5000 reais de salário</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Paguei 800 reais de aluguel</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Investi 1000 reais na poupança</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Gastei 200 reais com combustível</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Paguei 150 reais no supermercado</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Recebi 300 reais de dividendos</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Paguei 500 reais de cartão de crédito</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Investi 2000 reais em ações</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Gastei 100 reais com lazer</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Paguei 400 reais de energia</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Recebi 5000 reais de salário</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 800 reais de aluguel</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Investi 1000 reais na poupança</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Gastei 200 reais com combustível</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 150 reais no supermercado</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Recebi 300 reais de dividendos</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 500 reais de cartão de crédito</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Investi 2000 reais em ações</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Gastei 100 reais com lazer</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Paguei 400 reais de energia</button>
-                </div>
-              </div>
-              
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Recebi 5000 reais de salário</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Paguei 800 reais de aluguel</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Investi 1000 reais na poupança</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Gastei 200 reais com combustível</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Paguei 150 reais no supermercado</button>
+            </div>
+          </div>
+
           {/* Linha 3 - Movimento para a esquerda */}
           <div className="scroll-container mb-8">
             <div className="scroll-left flex">
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha renda passiva?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais impostos preciso pagar?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está minha reserva de emergência?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu patrimônio líquido?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto devo no cartão de crédito?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha taxa de poupança?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está minha aposentadoria?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais investimentos tenho?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu perfil de risco?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como diversificar meus investimentos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha renda passiva?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quais impostos preciso pagar?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como está minha reserva de emergência?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu patrimônio líquido?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto devo no cartão de crédito?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha taxa de poupança?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como está minha aposentadoria?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quais investimentos tenho?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu perfil de risco?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como diversificar meus investimentos?</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha renda passiva?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais impostos preciso pagar?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está minha reserva de emergência?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu patrimônio líquido?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto devo no cartão de crédito?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha taxa de poupança?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como está minha aposentadoria?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais investimentos tenho?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual meu perfil de risco?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como diversificar meus investimentos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha renda passiva?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quais impostos preciso pagar?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como está minha reserva de emergência?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu patrimônio líquido?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto devo no cartão de crédito?</button>
             </div>
           </div>
 
           {/* Linha 4 - Movimento para a direita */}
           <div className="scroll-container">
             <div className="scroll-right flex">
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto posso investir este mês?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual a melhor estratégia de investimento?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como reduzir meus gastos?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha capacidade de pagamento?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como planejar minha aposentadoria?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais são meus gastos desnecessários?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como aumentar minha renda?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual o melhor momento para investir?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como controlar meus impulsos de compra?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha meta financeira para este ano?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto posso investir este mês?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual a melhor estratégia de investimento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como reduzir meus gastos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha margem de segurança?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como planejar minha aposentadoria?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu custo de vida?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como aumentar minha renda?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha capacidade de investimento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como otimizar meus impostos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu perfil financeiro?</button>
               {/* Duplicar para movimento contínuo */}
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quanto posso investir este mês?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual a melhor estratégia de investimento?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como reduzir meus gastos?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha capacidade de pagamento?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como planejar minha aposentadoria?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Quais são meus gastos desnecessários?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como aumentar minha renda?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual o melhor momento para investir?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Como controlar meus impulsos de compra?</button>
-              <button className="question-button bg-white/5 text-gray-300 border border-primary/30 hover:bg-primary/20 hover:text-primary hover:border-primary">Qual minha meta financeira para este ano?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto posso investir este mês?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual a melhor estratégia de investimento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como reduzir meus gastos?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha margem de segurança?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como planejar minha aposentadoria?</button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section - Dark Theme COM EFEITOS */}
-      <section className="py-24" style={{ backgroundColor: '#151a21' }}>
+      {/* Seção de Benefícios COM EFEITOS */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-5 tracking-tight">Por que escolher nossa plataforma?</h3>
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">Tecnologia avançada, segurança máxima e resultados comprovados</p>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Por que escolher o {appConfig.company_name}?
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Descubra os benefícios que fazem a diferença na sua vida financeira
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 animate-fade-in-up border border-primary/20 hover:border-primary/40 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-8 animate-float shadow-md">
-                <div className="text-2xl">⚡</div>
-              </div>
-              <h4 className="text-xl font-semibold text-primary mb-4 tracking-tight">Dashboard Inteligente</h4>
-              <p className="text-gray-400 leading-relaxed text-[15px]">Visualize todas as suas finanças em um só lugar com insights personalizados.</p>
-            </div>
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 animate-fade-in-up border border-primary/20 hover:border-primary/40 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-8 animate-float shadow-md">
-                <div className="text-2xl">🔒</div>
-              </div>
-              <h4 className="text-xl font-semibold text-primary mb-4 tracking-tight">Segurança Máxima</h4>
-              <p className="text-gray-400 leading-relaxed text-[15px]">Criptografia de nível bancário e proteção total dos seus dados.</p>
-            </div>
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 animate-fade-in-up border border-primary/20 hover:border-primary/40 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-8 animate-float shadow-md">
-                <div className="text-2xl">⚡</div>
-              </div>
-              <h4 className="text-xl font-semibold text-primary mb-4 tracking-tight">Automação Total</h4>
-              <p className="text-gray-400 leading-relaxed text-[15px]">Configure uma vez e deixe a plataforma trabalhar por você.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* App Demo Section - Dark Theme COM EFEITOS */}
-      <section className="py-24" style={{ backgroundColor: '#1a2028' }}>
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-slide-in-left">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Controle suas finanças de <span className="text-primary">onde estiver</span>
-              </h3>
-              <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
-                Acesse sua conta pelo app ou WhatsApp. Dashboard completo, metas financeiras e relatórios detalhados.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Benefício 1 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Controle Inteligente</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Gerencie todas suas finanças em um só lugar com inteligência artificial avançada
               </p>
-              <div className="space-y-5">
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-gray-300 leading-relaxed">Movimentos ilimitados</span>
-                </div>
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-gray-300 leading-relaxed">Dashboard completo</span>
-                </div>
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-gray-300 leading-relaxed">Todos os relatórios</span>
-                </div>
-                <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-gray-300 leading-relaxed">Metas ilimitadas</span>
-                </div>
-              </div>
             </div>
-            <div className="relative animate-slide-in-right">
-              <img
-                src="/imagens/app-macbook-poupeja.png"
-                alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
-                className="w-[800px] h-auto mx-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500 rounded-lg"
+
+            {/* Benefício 2 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Segurança Total</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Seus dados protegidos com criptografia de nível bancário e autenticação avançada
+              </p>
+            </div>
+
+            {/* Benefício 3 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <Cpu className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">IA Avançada</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Insights personalizados e recomendações inteligentes para otimizar suas finanças
+              </p>
+            </div>
+
+            {/* Benefício 4 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Crescimento Garantido</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Estratégias comprovadas para fazer seu dinheiro render mais e alcançar seus objetivos
+              </p>
+            </div>
+
+            {/* Benefício 5 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <MessageCircle className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Suporte 24/7</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Atendimento especializado sempre disponível para tirar suas dúvidas
+              </p>
+            </div>
+
+            {/* Benefício 6 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Interface Intuitiva</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Design moderno e fácil de usar, pensado para simplificar sua experiência
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção "Controle suas finanças de onde estiver" */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Image */}
+            <div className="relative animate-slide-in-left">
+              <img 
+                src="/imagens/app-macbook-poupeja.png" 
+                alt="App Poupe Já no MacBook"
+                className="w-full h-auto rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-md p-5 rounded-xl shadow-2xl border border-primary/30 hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-primary tracking-tight">+32%</p>
-                  <p className="text-sm text-gray-400 mt-1">Economia este mês</p>
-                </div>
-              </div>
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full opacity-20 animate-float"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-400 rounded-full opacity-30 animate-float-slow"></div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Pricing Section - Dark Theme COM EFEITOS */}
-      <section id="plans" className="py-24" style={{ backgroundColor: '#151a21' }}>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-5 tracking-tight">Escolha seu plano</h3>
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">Planos flexíveis para todos os perfis</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Plano Mensal */}
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 animate-scale-in border border-white/10 hover:border-primary/40 backdrop-blur-sm">
-              <div className="text-center mb-10">
-                <h4 className="text-2xl font-bold text-white mb-3 tracking-tight">Plano Mensal</h4>
-                <div className="text-5xl font-bold text-primary mb-2 tracking-tight">
-                  R$ {appConfig.plan_price_monthly}
-                </div>
-                <p className="text-gray-400 text-lg">por mês</p>
-              </div>
-              <ul className="space-y-4 mb-10">
-                {appConfig.plan_features_monthly.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 animate-fade-in-up">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                    <span className="text-gray-300 leading-relaxed">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <button 
-                className="w-full px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-xl font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=monthly`}
-              >
-                Começar Agora
-              </button>
-      </div>
+            {/* Right Column - Content */}
+            <div className="animate-slide-in-right">
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Controle suas finanças
+                <span className="block text-orange-600 mt-2">
+                  de onde estiver
+                </span>
+              </h3>
+              
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Acesse sua conta de qualquer dispositivo e tenha controle total das suas finanças 
+                na palma da sua mão. Sincronização em tempo real e interface responsiva.
+              </p>
 
-            {/* Plano Anual */}
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-primary animate-scale-in backdrop-blur-sm">
-              <div className="text-center mb-10">
-                <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg">
-                  Mais vantajoso
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-lg text-gray-700">Acesso multiplataforma</span>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-3 tracking-tight">Plano Anual</h4>
-                <div className="text-5xl font-bold text-primary mb-2 tracking-tight">
-                  R$ {appConfig.plan_price_annual}
+                <div className="flex items-center gap-4">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-lg text-gray-700">Sincronização em tempo real</span>
                 </div>
-                <p className="text-gray-400 text-lg">por ano</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-lg text-gray-700">Interface responsiva</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-lg text-gray-700">Backup automático na nuvem</span>
+                </div>
               </div>
-              <ul className="space-y-4 mb-10">
-                {appConfig.plan_features_annual.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 animate-fade-in-up">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                    <span className="text-gray-300 font-medium leading-relaxed">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+
               <button 
-                className="w-full px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-xl font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=annual`}
+                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Começar Agora
               </button>
@@ -369,80 +353,205 @@ const Template1 = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - Dark Theme COM EFEITOS */}
-      <section className="py-24" style={{ backgroundColor: '#1a2028' }}>
+      {/* Seção de Depoimentos */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-5 tracking-tight">O que nossos usuários dizem</h3>
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">Depoimentos reais de quem já usa nossa plataforma</p>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              O que nossos clientes dizem
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Histórias reais de pessoas que transformaram suas vidas financeiras
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up border border-white/10 hover:border-primary/40 backdrop-blur-sm">
-              <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center mr-4 animate-float shadow-lg">
-                  <span className="text-white font-bold text-base">M</span>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Depoimento 1 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
+                ))}
+              </div>
+              <Quote className="w-8 h-8 text-orange-500 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "Consegui organizar minhas finanças e economizar 30% do meu salário em apenas 3 meses. 
+                A plataforma é incrível!"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">M</span>
                 </div>
                 <div>
-                  <h5 className="text-white font-semibold tracking-tight">Maria Silva</h5>
-                  <p className="text-gray-400 text-sm mt-0.5">Empresária</p>
+                  <h5 className="font-semibold text-gray-900">Maria Silva</h5>
+                  <p className="text-gray-600 text-sm">Empresária</p>
                 </div>
               </div>
-              <p className="text-gray-300 leading-relaxed text-[15px]">"Revolucionou minha gestão financeira. Interface intuitiva e funcionalidades incríveis!"</p>
             </div>
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up border border-white/10 hover:border-primary/40 backdrop-blur-sm">
-              <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center mr-4 animate-float shadow-lg">
-                  <span className="text-white font-bold text-base">J</span>
+
+            {/* Depoimento 2 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
+                ))}
+              </div>
+              <Quote className="w-8 h-8 text-orange-500 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "A IA me ajudou a identificar gastos desnecessários que eu nem percebia. 
+                Agora tenho controle total!"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">J</span>
                 </div>
                 <div>
-                  <h5 className="text-white font-semibold tracking-tight">João Santos</h5>
-                  <p className="text-gray-400 text-sm mt-0.5">Investidor</p>
+                  <h5 className="font-semibold text-gray-900">João Santos</h5>
+                  <p className="text-gray-600 text-sm">Desenvolvedor</p>
                 </div>
               </div>
-              <p className="text-gray-300 leading-relaxed text-[15px]">"Controle total dos investimentos. Relatórios detalhados e insights valiosos."</p>
             </div>
-            <div className="card-3d bg-white/5 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up border border-white/10 hover:border-primary/40 backdrop-blur-sm">
-              <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center mr-4 animate-float shadow-lg">
-                  <span className="text-white font-bold text-base">A</span>
+
+            {/* Depoimento 3 */}
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
+                ))}
+              </div>
+              <Quote className="w-8 h-8 text-orange-500 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "Interface super intuitiva e funcionalidades incríveis. 
+                Recomendo para todos que querem organizar a vida financeira."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">A</span>
                 </div>
                 <div>
-                  <h5 className="text-white font-semibold tracking-tight">Ana Costa</h5>
-                  <p className="text-gray-400 text-sm mt-0.5">Freelancer</p>
+                  <h5 className="font-semibold text-gray-900">Ana Costa</h5>
+                  <p className="text-gray-600 text-sm">Professora</p>
                 </div>
               </div>
-              <p className="text-gray-300 leading-relaxed text-[15px]">"Perfeito para freelancers. Organização financeira nunca foi tão fácil!"</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section - Dark Theme COM EFEITOS */}
-      <section className="py-24" style={{ backgroundColor: '#151a21' }}>
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight tracking-tight animate-fade-in-up">
-            Pronto para transformar suas <span className="text-primary">finanças</span>?
-          </h3>
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
-            Junte-se a milhares de usuários que já controlam suas finanças com nossa plataforma.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-5 justify-center animate-scale-in">
-            <button 
-              className="px-10 py-4 bg-primary hover:bg-primary-dark text-white rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl"
-              onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Começar Agora
-            </button>
-            <button 
-              className="px-10 py-4 bg-white/10 text-white border-2 border-primary hover:bg-primary/20 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl backdrop-blur-sm"
-              onClick={() => window.open(`https://wa.me/${appConfig.support_whatsapp.replace(/\D/g, '')}`, '_blank')}
-            >
-              Falar no WhatsApp
-            </button>
+      {/* Seção de Planos */}
+      <section id="plans" className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Escolha seu plano ideal
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Planos flexíveis para cada necessidade e orçamento
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Plano Básico */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-200">
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Básico</h4>
+                <div className="text-4xl font-bold text-orange-600 mb-2">Grátis</div>
+                <p className="text-gray-600">Para começar</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Controle básico de gastos</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Relatórios mensais</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Suporte por email</span>
+                </li>
+              </ul>
+              
+              <button className="w-full px-6 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold transition-all duration-300 hover:bg-gray-200">
+                Começar Grátis
+              </button>
+            </div>
+
+            {/* Plano Pro - Destaque */}
+            <div className="bg-gradient-to-br from-orange-500 to-amber-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-white text-orange-600 px-4 py-2 rounded-full text-sm font-bold">
+                  Mais Popular
+                </span>
+              </div>
+              
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-white mb-2">Pro</h4>
+                <div className="text-4xl font-bold text-white mb-2">R$ 29,90</div>
+                <p className="text-orange-100">por mês</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-white" />
+                  <span className="text-white">Tudo do plano Básico</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-white" />
+                  <span className="text-white">IA para análise financeira</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-white" />
+                  <span className="text-white">Relatórios avançados</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-white" />
+                  <span className="text-white">Suporte prioritário</span>
+                </li>
+              </ul>
+              
+              <button className="w-full px-6 py-3 bg-white text-orange-600 rounded-xl font-semibold transition-all duration-300 hover:bg-orange-50">
+                Escolher Pro
+              </button>
+            </div>
+
+            {/* Plano Premium */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-200">
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Premium</h4>
+                <div className="text-4xl font-bold text-orange-600 mb-2">R$ 59,90</div>
+                <p className="text-gray-600">por mês</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Tudo do plano Pro</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Consultoria financeira</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Acesso a investimentos</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Suporte 24/7</span>
+                </li>
+              </ul>
+              
+              <button className="w-full px-6 py-3 bg-orange-600 text-white rounded-xl font-semibold transition-all duration-300 hover:bg-orange-700">
+                Escolher Premium
+              </button>
+            </div>
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
