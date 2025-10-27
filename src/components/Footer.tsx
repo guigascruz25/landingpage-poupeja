@@ -1,4 +1,4 @@
-﻿import { appConfig } from "@/config/app";
+import { appConfig } from "@/config/app";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
               financeira que você sempre sonhou.
             </p>
             <div className="text-background/60 text-sm">
-              © 2024 {appConfig.company_name}. Todos os direitos reservados.
+              © {new Date().getFullYear()} {appConfig.company_name}. Todos os direitos reservados.
             </div>
           </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href={`${appConfig.app_url}/login`}
+                  href={appConfig.app_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-background/80 hover:text-background transition-colors duration-200 text-[15px] inline-block"
@@ -79,7 +79,6 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-5 tracking-tight">Suporte</h4>
             <ul className="space-y-4 text-background/80 text-[15px]">
-              <li className="font-medium text-background">Atendimento 24/7</li>
               <li>
                 <button 
                   onClick={handlePhoneClick}

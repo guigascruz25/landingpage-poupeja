@@ -91,7 +91,7 @@ const Template1 = () => {
              {/* Right Column - Visual/Demo COM EFEITOS 3D */}
              <div className="relative animate-slide-in-right">
               <img 
-                src="/imagens/mockup-mackbook.png" 
+                src="/imagens/app-dashboard.png" 
                 alt="Dashboard do App Poupe Já"
                 className="w-[500px] h-auto mx-auto drop-shadow-2xl rounded-xl"
               />
@@ -290,7 +290,7 @@ const Template1 = () => {
             </div>
             <div className="relative animate-slide-in-right">
               <img
-                src="/imagens/mockup-mackbook.png"
+                src="/imagens/app-macbook-poupeja.png"
                 alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
                 className="w-[800px] h-auto mx-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500 rounded-lg"
               />
