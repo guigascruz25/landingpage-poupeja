@@ -88,7 +88,7 @@ const Template3 = () => {
             {/* Right Column - Visual/Demo */}
             <div className="relative animate-fade-in-scale delay-800">
               <img 
-                src="/imagens/app-dashboard.png" 
+                src="/imagens/mockup-mackbook.png" 
                 alt="Dashboard do App Poupe Já"
                 className="w-full max-w-lg mx-auto drop-shadow-2xl"
               />
@@ -289,7 +289,7 @@ const Template3 = () => {
             </div>
             <div className="relative">
               <img
-                src="/imagens/app-macbook-poupeja.png"
+                src="/imagens/mockup-mackbook.png"
                 alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
                 className="w-full mx-auto drop-shadow-2xl"
               />

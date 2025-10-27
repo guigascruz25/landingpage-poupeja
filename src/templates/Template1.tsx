@@ -90,11 +90,11 @@ const Template1 = () => {
 
              {/* Right Column - Visual/Demo COM EFEITOS 3D */}
              <div className="relative animate-slide-in-right">
-               <img 
-                 src="/imagens/app-dashboard.png" 
-                 alt="Dashboard do App Poupe Já"
-                 className="w-[500px] h-auto mx-auto drop-shadow-2xl rounded-xl"
-               />
+              <img 
+                src="/imagens/mockup-mackbook.png" 
+                alt="Dashboard do App Poupe Já"
+                className="w-[500px] h-auto mx-auto drop-shadow-2xl rounded-xl"
+              />
                {/* Floating Elements */}
                <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary rounded-full opacity-20 animate-float"></div>
                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary rounded-full opacity-30 animate-float-slow"></div>
@@ -290,7 +290,7 @@ const Template1 = () => {
             </div>
             <div className="relative animate-slide-in-right">
               <img
-                src="/imagens/app-macbook-poupeja.png"
+                src="/imagens/mockup-mackbook.png"
                 alt="Dashboard do app de finanças mostrando gráficos e controle financeiro"
                 className="w-[800px] h-auto mx-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500 rounded-lg"
               />
