@@ -348,6 +348,9 @@ const Template4 = () => {
                   R$ {appConfig.plan_price_annual}
                 </div>
                 <p className="text-gray-400">por ano</p>
+                <p className="text-gray-300 font-semibold text-sm mt-2">
+                  Apenas R$ {(parseFloat(appConfig.plan_price_annual.replace(',', '.')) / 12).toFixed(2).replace('.', ',')} por mês
+                </p>
               </div>
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_annual.map((feature, index) => (

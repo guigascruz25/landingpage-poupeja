@@ -444,7 +444,7 @@ const Template3 = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
             {/* Plano Mensal */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-blue-100">
               <div className="text-center mb-8">
@@ -472,10 +472,10 @@ const Template3 = () => {
             </div>
 
             {/* Plano Anual - Destaque */}
-            <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up text-white relative overflow-hidden">
+            <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up text-white relative">
               {/* Badge de Destaque */}
-              <div className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full text-sm font-bold transform rotate-12">
-                Mais Popular
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg z-50">
+                Mais vantajoso
               </div>
 
               <div className="text-center mb-8">
@@ -484,7 +484,9 @@ const Template3 = () => {
                   R$ {appConfig.plan_price_annual}
                 </div>
                 <p className="text-blue-100">por ano</p>
-                <p className="text-sm text-blue-200 mt-2">Economia de 25%</p>
+                <p className="text-sm text-blue-200 mt-2">
+                  Apenas R$ {(parseFloat(appConfig.plan_price_annual.replace(',', '.')) / 12).toFixed(2).replace('.', ',')} por mês
+                </p>
               </div>
 
               <ul className="space-y-4 mb-8">

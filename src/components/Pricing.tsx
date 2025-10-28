@@ -65,7 +65,7 @@ const Pricing = () => {
                 <span className="text-muted-foreground text-lg">/ano</span>
               </div>
               <p className="text-success font-semibold text-base">
-                Economize mais de 25%
+                Apenas R$ {(parseFloat(appConfig.plan_price_annual.replace(',', '.')) / 12).toFixed(2).replace('.', ',')} por mês
               </p>
             </div>
 

@@ -426,7 +426,7 @@ const Template1 = () => {
                 </div>
                 <p className="text-orange-100">por ano</p>
                 <p className="text-orange-200 font-semibold text-sm mt-2">
-                  Economize mais de 25%
+                  Apenas R$ {(parseFloat(appConfig.plan_price_annual.replace(',', '.')) / 12).toFixed(2).replace('.', ',')} por mês
                 </p>
               </div>
               
