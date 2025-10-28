@@ -466,7 +466,10 @@ const Template3 = () => {
                 ))}
               </ul>
 
-              <button className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <button 
+                className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=monthly`}
+              >
                 Começar Agora
               </button>
             </div>
@@ -500,7 +503,10 @@ const Template3 = () => {
                 ))}
               </ul>
 
-              <button className="w-full px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <button 
+                className="w-full px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=annual`}
+              >
                 Começar Agora
               </button>
             </div>
