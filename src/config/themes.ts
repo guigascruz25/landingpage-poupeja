@@ -16,18 +16,18 @@ export interface ThemeConfig {
 
 export const themes: Record<string, ThemeConfig> = {
   template1: {
-    name: "Laranja Vibrante",
-    primary: "#ff9100", // orange-500
-    secondary: "#f57c00", // orange-600
-    accent: "#ffb74d", // orange-300
+    name: "Azul Profissional",
+    primary: "#2563eb", // blue-600
+    secondary: "#1d4ed8", // blue-700
+    accent: "#3b82f6", // blue-500
     background: "#ffffff",
     foreground: "#1f2937",
-    muted: "#fff8e1",
-    heroGradient: "from-orange-500 via-orange-600 to-amber-600",
-    buttonPrimary: "bg-orange-500 hover:bg-orange-600",
-    buttonSecondary: "bg-white text-orange-600 border-orange-400 hover:bg-orange-50",
+    muted: "#f8fafc",
+    heroGradient: "from-blue-600 via-blue-700 to-blue-800",
+    buttonPrimary: "bg-blue-600 hover:bg-blue-700",
+    buttonSecondary: "bg-white text-blue-600 border-blue-600 hover:bg-blue-50",
     cardBackground: "bg-white",
-    borderColor: "border-orange-300"
+    borderColor: "border-blue-200"
   },
   template2: {
     name: "Emerald Luxury",

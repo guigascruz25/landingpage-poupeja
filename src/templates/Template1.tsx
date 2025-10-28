@@ -10,21 +10,21 @@ const Template1 = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900" style={{ 
-      '--primary': theme.primary,
-      '--secondary': theme.secondary,
-      '--accent': theme.accent,
-      '--background': theme.background,
-      '--foreground': theme.foreground,
-      '--muted': theme.muted
+      '--primary': '#e85b0b',
+      '--secondary': '#f97316',
+      '--accent': '#fb923c',
+      '--background': '#ffffff',
+      '--foreground': '#1f2937',
+      '--muted': '#f3f4f6'
     } as React.CSSProperties}>
       <DynamicHead />
       
       {/* Hero Section - Orange Luxury */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 overflow-hidden animate-gradient-shift">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 overflow-hidden animate-gradient-shift">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="floating-element absolute top-20 left-20 w-96 h-96 bg-orange-300/30 rounded-full blur-3xl animate-float-gentle"></div>
-          <div className="floating-element absolute bottom-20 right-20 w-96 h-96 bg-amber-400/25 rounded-full blur-3xl animate-float-gentle"></div>
+          <div className="floating-element absolute bottom-20 right-20 w-96 h-96 bg-red-400/25 rounded-full blur-3xl animate-float-gentle"></div>
           <Sparkles className="absolute top-40 right-1/4 w-8 h-8 text-orange-200/40 animate-pulse" />
           <Sparkles className="absolute bottom-40 left-1/3 w-6 h-6 text-orange-300/30 animate-pulse" />
         </div>
@@ -43,7 +43,7 @@ const Template1 = () => {
 
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up tracking-tight">
                 Controle suas finanças com
-                <span className="block mt-3 bg-gradient-to-r from-orange-200 via-orange-100 to-amber-200 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(255,145,0,0.5)] text-[1.1em] tracking-tighter">
+                <span className="block mt-3 bg-gradient-to-r from-orange-200 via-orange-100 to-red-200 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(232,91,11,0.5)] text-[1.1em] tracking-tighter">
                   inteligência e simplicidade
                 </span>
               </h2>
@@ -187,11 +187,11 @@ const Template1 = () => {
               <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como reduzir meus gastos?</button>
               <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha margem de segurança?</button>
               <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como planejar minha aposentadoria?</button>
-              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu custo de vida?</button>
-              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como aumentar minha renda?</button>
-              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha capacidade de investimento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual o melhor momento para investir?</button>
               <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como otimizar meus impostos?</button>
-              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu perfil financeiro?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual minha capacidade de endividamento?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Como aumentar minha renda?</button>
+              <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual meu perfil de investidor?</button>
               {/* Duplicar para movimento contínuo */}
               <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Quanto posso investir este mês?</button>
               <button className="question-button bg-white/80 backdrop-blur-sm text-orange-700 border-2 border-orange-200/50 hover:bg-orange-50 hover:border-orange-400 flex items-center gap-2"><MessageCircle className="w-4 h-4" />Qual a melhor estratégia de investimento?</button>
@@ -204,8 +204,10 @@ const Template1 = () => {
       </section>
 
       {/* Seção de Benefícios COM EFEITOS */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-orange-50 opacity-40"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Por que escolher o {appConfig.company_name}?
@@ -216,77 +218,56 @@ const Template1 = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Benefício 1 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
+            {[
+              {
+                icon: <Zap className="w-8 h-8 text-orange-600" />,
+                title: "Velocidade Incomparável",
+                description: "Processamento em tempo real de todas as suas transações financeiras com tecnologia de ponta."
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-orange-600" />,
+                title: "Segurança Máxima",
+                description: "Criptografia de nível bancário e proteção avançada para manter seus dados sempre seguros."
+              },
+              {
+                icon: <Cpu className="w-8 h-8 text-orange-600" />,
+                title: "Inteligência Artificial",
+                description: "IA avançada que aprende seus hábitos e oferece insights personalizados para suas finanças."
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8 text-orange-600" />,
+                title: "Análises Avançadas",
+                description: "Relatórios detalhados e projeções inteligentes para otimizar seus investimentos."
+              },
+              {
+                icon: <MessageCircle className="w-8 h-8 text-orange-600" />,
+                title: "Suporte 24/7",
+                description: "Atendimento especializado disponível a qualquer hora para resolver suas dúvidas."
+              },
+              {
+                icon: <Star className="w-8 h-8 text-orange-600" />,
+                title: "Experiência Premium",
+                description: "Interface intuitiva e recursos exclusivos para uma experiência financeira única."
+              }
+            ].map((benefit, index) => (
+              <div key={index} className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-orange-100/50 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="mb-6 p-3 bg-orange-100 rounded-xl w-fit group-hover:bg-orange-200 transition-colors duration-300">
+                  {benefit.icon}
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                  {benefit.title}
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Controle Inteligente</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Gerencie todas suas finanças em um só lugar com inteligência artificial avançada
-              </p>
-            </div>
-
-            {/* Benefício 2 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Segurança Total</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Seus dados protegidos com criptografia de nível bancário e autenticação avançada
-              </p>
-            </div>
-
-            {/* Benefício 3 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <Cpu className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">IA Avançada</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Insights personalizados e recomendações inteligentes para otimizar suas finanças
-              </p>
-            </div>
-
-            {/* Benefício 4 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Crescimento Garantido</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Estratégias comprovadas para fazer seu dinheiro render mais e alcançar seus objetivos
-              </p>
-            </div>
-
-            {/* Benefício 5 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <MessageCircle className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Suporte 24/7</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Atendimento especializado sempre disponível para tirar suas dúvidas
-              </p>
-            </div>
-
-            {/* Benefício 6 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Interface Intuitiva</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Design moderno e fácil de usar, pensado para simplificar sua experiência
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Seção "Controle suas finanças de onde estiver" */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Image */}
@@ -297,8 +278,8 @@ const Template1 = () => {
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full opacity-20 animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-400 rounded-full opacity-30 animate-float-slow"></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-orange-500/20 rounded-full blur-xl animate-float"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-orange-400/15 rounded-full blur-2xl animate-float-slow"></div>
             </div>
 
             {/* Right Column - Content */}
@@ -311,39 +292,28 @@ const Template1 = () => {
               </h3>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Acesse sua conta de qualquer dispositivo e tenha controle total das suas finanças 
-                na palma da sua mão. Sincronização em tempo real e interface responsiva.
+                Acesse sua conta de qualquer dispositivo e tenha controle total das suas finanças. 
+                Sincronização em tempo real entre todos os seus dispositivos.
               </p>
 
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
+                {[
+                  "Acesso via web, mobile e desktop",
+                  "Sincronização automática em tempo real",
+                  "Interface responsiva e intuitiva",
+                  "Dados sempre atualizados"
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-orange-600" />
+                    </div>
+                    <span className="text-gray-700 text-lg">{feature}</span>
                   </div>
-                  <span className="text-lg text-gray-700">Acesso multiplataforma</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg text-gray-700">Sincronização em tempo real</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg text-gray-700">Interface responsiva</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg text-gray-700">Backup automático na nuvem</span>
-                </div>
+                ))}
               </div>
 
               <button 
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Começar Agora
@@ -353,9 +323,11 @@ const Template1 = () => {
         </div>
       </section>
 
-      {/* Seção de Depoimentos */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
-        <div className="container mx-auto px-4">
+      {/* Seção de Depoimentos COM EFEITOS */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-orange-50 opacity-30"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               O que nossos clientes dizem
@@ -366,187 +338,122 @@ const Template1 = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Depoimento 1 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
-                ))}
-              </div>
-              <Quote className="w-8 h-8 text-orange-500 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                "Consegui organizar minhas finanças e economizar 30% do meu salário em apenas 3 meses. 
-                A plataforma é incrível!"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">M</span>
+            {[
+              {
+                name: "Maria Silva",
+                role: "Empresária",
+                content: "Revolucionou completamente como gerencio minhas finanças. A IA me ajuda a tomar decisões mais inteligentes todos os dias.",
+                rating: 5
+              },
+              {
+                name: "João Santos",
+                role: "Investidor",
+                content: "Os insights são incríveis! Consegui aumentar meus rendimentos em 40% no primeiro ano usando a plataforma.",
+                rating: 5
+              },
+              {
+                name: "Ana Costa",
+                role: "Freelancer",
+                content: "Finalmente tenho controle total das minhas finanças. A interface é intuitiva e os relatórios são muito detalhados.",
+                rating: 5
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-orange-100/50 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="mb-6">
+                  <Quote className="w-8 h-8 text-orange-400 mb-4" />
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    "{testimonial.content}"
+                  </p>
                 </div>
+                
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-orange-400 fill-current" />
+                  ))}
+                </div>
+                
                 <div>
-                  <h5 className="font-semibold text-gray-900">Maria Silva</h5>
-                  <p className="text-gray-600 text-sm">Empresária</p>
+                  <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
+                  <p className="text-orange-600 font-medium">{testimonial.role}</p>
                 </div>
               </div>
-            </div>
-
-            {/* Depoimento 2 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
-                ))}
-              </div>
-              <Quote className="w-8 h-8 text-orange-500 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                "A IA me ajudou a identificar gastos desnecessários que eu nem percebia. 
-                Agora tenho controle total!"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">J</span>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-900">João Santos</h5>
-                  <p className="text-gray-600 text-sm">Desenvolvedor</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Depoimento 3 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
-                ))}
-              </div>
-              <Quote className="w-8 h-8 text-orange-500 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                "Interface super intuitiva e funcionalidades incríveis. 
-                Recomendo para todos que querem organizar a vida financeira."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">A</span>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-900">Ana Costa</h5>
-                  <p className="text-gray-600 text-sm">Professora</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Seção de Planos */}
-      <section id="plans" className="py-20 bg-white overflow-hidden">
+      {/* Seção de Planos COM EFEITOS */}
+      <section id="plans" className="py-20 bg-gradient-to-br from-orange-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Escolha seu plano ideal
-            </h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Planos flexíveis para cada necessidade e orçamento
-            </p>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">Escolha seu plano</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">Planos flexíveis para todos os perfis</p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Plano Básico */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-200">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Plano Mensal */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-2 border-orange-200 hover:border-orange-300 hover:scale-105 animate-scale-in">
               <div className="text-center mb-8">
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">Básico</h4>
-                <div className="text-4xl font-bold text-orange-600 mb-2">Grátis</div>
-                <p className="text-gray-600">Para começar</p>
-              </div>
-              
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Controle básico de gastos</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Relatórios mensais</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Suporte por email</span>
-                </li>
-              </ul>
-              
-              <button className="w-full px-6 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold transition-all duration-300 hover:bg-gray-200">
-                Começar Grátis
-              </button>
-            </div>
-
-            {/* Plano Pro - Destaque */}
-            <div className="bg-gradient-to-br from-orange-500 to-amber-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-white text-orange-600 px-4 py-2 rounded-full text-sm font-bold">
-                  Mais Popular
-                </span>
-              </div>
-              
-              <div className="text-center mb-8">
-                <h4 className="text-2xl font-bold text-white mb-2">Pro</h4>
-                <div className="text-4xl font-bold text-white mb-2">R$ 29,90</div>
-                <p className="text-orange-100">por mês</p>
-              </div>
-              
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-white" />
-                  <span className="text-white">Tudo do plano Básico</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-white" />
-                  <span className="text-white">IA para análise financeira</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-white" />
-                  <span className="text-white">Relatórios avançados</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-white" />
-                  <span className="text-white">Suporte prioritário</span>
-                </li>
-              </ul>
-              
-              <button className="w-full px-6 py-3 bg-white text-orange-600 rounded-xl font-semibold transition-all duration-300 hover:bg-orange-50">
-                Escolher Pro
-              </button>
-            </div>
-
-            {/* Plano Premium */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-200">
-              <div className="text-center mb-8">
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">Premium</h4>
-                <div className="text-4xl font-bold text-orange-600 mb-2">R$ 59,90</div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Plano Mensal</h4>
+                <div className="text-5xl font-bold text-orange-600 mb-2">
+                  R$ {appConfig.plan_price_monthly}
+                </div>
                 <p className="text-gray-600">por mês</p>
               </div>
+              <ul className="space-y-4 mb-8">
+                {appConfig.plan_features_monthly.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3 animate-fade-in-up">
+                    <Check className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <button className="w-full px-6 py-3 bg-orange-100 text-orange-600 rounded-xl font-semibold hover:bg-orange-200 transition-colors duration-300">
+                Começar Agora
+              </button>
+            </div>
+
+            {/* Plano Anual - Destacado */}
+            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-8 transform scale-105 relative animate-scale-in" style={{ animationDelay: '0.1s' }}>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-400 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-2">
+                <Star className="w-4 h-4" fill="currentColor" />
+                Mais vantajoso
+              </div>
+              
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-white mb-2">Plano Anual</h4>
+                <div className="text-5xl font-bold text-white mb-2">
+                  R$ {appConfig.plan_price_annual}
+                </div>
+                <p className="text-orange-100">por ano</p>
+                <p className="text-orange-200 font-semibold text-sm mt-2">
+                  Economize mais de 25%
+                </p>
+              </div>
               
               <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Tudo do plano Pro</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Consultoria financeira</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Acesso a investimentos</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-orange-500" />
-                  <span className="text-gray-700">Suporte 24/7</span>
-                </li>
+                {appConfig.plan_features_annual.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3 animate-fade-in-up">
+                    <Check className="w-5 h-5 text-white flex-shrink-0" />
+                    <span className="text-white font-medium">{feature}</span>
+                  </li>
+                ))}
               </ul>
               
-              <button className="w-full px-6 py-3 bg-orange-600 text-white rounded-xl font-semibold transition-all duration-300 hover:bg-orange-700">
-                Escolher Premium
+              <button className="w-full px-6 py-3 bg-white text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300">
+                Começar Plano Anual
               </button>
+            </div>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              Mais de 10.000 pessoas já transformaram suas finanças
+            </p>
+            <div className="flex justify-center items-center gap-6 text-sm text-gray-600">
+              <span>✅ Sem fidelidade</span>
+              <span>✅ Cancele quando quiser</span>
+              <span>✅ Suporte incluído</span>
             </div>
           </div>
         </div>
