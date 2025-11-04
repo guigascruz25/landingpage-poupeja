@@ -468,7 +468,7 @@ const Template3 = () => {
 
               <button 
                 className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=monthly`}
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=month`}
               >
                 Começar Agora
               </button>
@@ -505,7 +505,7 @@ const Template3 = () => {
 
               <button 
                 className="w-full px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=annual`}
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=year`}
               >
                 Começar Agora
               </button>

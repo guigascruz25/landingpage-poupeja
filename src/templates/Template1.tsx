@@ -407,7 +407,10 @@ const Template1 = () => {
                   </li>
                 ))}
               </ul>
-              <button className="w-full px-6 py-3 bg-orange-100 text-orange-600 rounded-xl font-semibold hover:bg-orange-200 transition-colors duration-300">
+              <button 
+                className="w-full px-6 py-3 bg-orange-100 text-orange-600 rounded-xl font-semibold hover:bg-orange-200 transition-colors duration-300"
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=month`}
+              >
                 Começar Agora
               </button>
             </div>
@@ -439,7 +442,10 @@ const Template1 = () => {
                 ))}
               </ul>
               
-              <button className="w-full px-6 py-3 bg-white text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300">
+              <button 
+                className="w-full px-6 py-3 bg-white text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-colors duration-300"
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=year`}
+              >
                 Começar Plano Anual
               </button>
             </div>

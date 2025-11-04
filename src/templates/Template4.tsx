@@ -331,7 +331,7 @@ const Template4 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=monthly`}
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=month`}
               >
                 Começar Agora
               </button>
@@ -362,7 +362,7 @@ const Template4 = () => {
               </ul>
               <button 
                 className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
-                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=annual`}
+                onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=year`}
               >
                 Começar Agora
               </button>
