@@ -2,6 +2,7 @@ import DynamicHead from "@/components/DynamicHead";
 import Footer from "@/components/Footer";
 import { getTheme } from "@/config/themes";
 import { appConfig } from "@/config/app";
+import { Sparkles, MessageCircle, Zap, Shield, Cpu, TrendingUp } from "lucide-react";
 
 // Template4 - Black Matte COMPLETO E INDEPENDENTE COM EFEITOS
 const Template4 = () => {
@@ -43,7 +44,7 @@ const Template4 = () => {
 
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
                 Controle suas finanças com
-                <span className="block mt-2 bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent text-glow">
+                <span className="block mt-2 bg-gradient-to-r from-indigo-400 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
                   elegância e precisão
                 </span>
               </h2>
@@ -56,13 +57,13 @@ const Template4 = () => {
               {/* CTA Buttons COM EFEITOS */}
               <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-scale-in">
                 <button 
-                  className="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-glow"
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-600 hover:from-indigo-400 hover:via-purple-400 hover:to-fuchsia-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-glow"
                   onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Começar Agora
                 </button>
                 <button 
-                  className="px-8 py-4 bg-white text-gray-800 border-2 border-gray-600 hover:bg-gray-100 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
+                  className="px-8 py-4 bg-transparent text-indigo-100 border-2 border-indigo-400 hover:bg-indigo-50/10 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
                   onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Ver Planos
@@ -223,34 +224,83 @@ const Template4 = () => {
         </div>
       </section>
 
-      {/* Features Section - Black Matte COM EFEITOS */}
-      <section className="py-20 bg-gray-800">
+      {/* Seção de Benefícios - Estrutura padronizada do Template3 (variação só de cor) */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Por que escolher nossa plataforma?</h3>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Tecnologia avançada, segurança máxima e resultados comprovados</p>
+            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Por que escolher o {appConfig.company_name}?
+            </h3>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              A solução mais completa e intuitiva para transformar sua vida financeira
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
-              <div className="w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                <div className="text-2xl">⚡</div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Benefício 1 */}
+            <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-700">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-white mb-4">Dashboard Inteligente</h4>
-              <p className="text-gray-400">Visualize todas as suas finanças em um só lugar com insights personalizados.</p>
+              <h4 className="text-xl font-bold text-white mb-4">Controle Instantâneo</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Gerencie todas suas finanças em tempo real com nossa interface intuitiva e poderosa.
+              </p>
             </div>
-            <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
-              <div className="w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                <div className="text-2xl"></div>
+
+            {/* Benefício 2 */}
+            <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-700">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-white mb-4">Segurança Máxima</h4>
-              <p className="text-gray-400">Criptografia de nível bancário e proteção total dos seus dados.</p>
+              <h4 className="text-xl font-bold text-white mb-4">Segurança Total</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Seus dados protegidos com criptografia de nível bancário e autenticação avançada.
+              </p>
             </div>
-            <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
-              <div className="w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                <div className="text-2xl">⚡</div>
+
+            {/* Benefício 3 */}
+            <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-700">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Cpu className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-white mb-4">Automação Total</h4>
-              <p className="text-gray-400">Configure uma vez e deixe a plataforma trabalhar por você.</p>
+              <h4 className="text-xl font-bold text-white mb-4">IA Avançada</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Insights inteligentes e recomendações personalizadas para otimizar suas finanças.
+              </p>
+            </div>
+
+            {/* Benefício 4 */}
+            <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-700">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-4">Crescimento Garantido</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Estratégias comprovadas para aumentar sua renda e patrimônio de forma consistente.
+              </p>
+            </div>
+
+            {/* Benefício 5 */}
+            <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-700">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <MessageCircle className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-4">Suporte 24/7</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Nossa equipe especializada está sempre disponível para ajudar você a prosperar.
+              </p>
+            </div>
+
+            {/* Benefício 6 */}
+            <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-gray-700">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-4">Experiência Premium</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Interface elegante e funcionalidades exclusivas para uma experiência única.
+              </p>
             </div>
           </div>
         </div>
@@ -270,19 +320,19 @@ const Template4 = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
                   <span className="text-gray-400">Movimentos ilimitados</span>
                 </div>
                 <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
                   <span className="text-gray-400">Dashboard completo</span>
                 </div>
                 <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
                   <span className="text-gray-400">Todos os relatórios</span>
                 </div>
                 <div className="flex items-center gap-3 animate-fade-in-up">
-                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
                   <span className="text-gray-400">Metas ilimitadas</span>
                 </div>
               </div>
@@ -313,7 +363,7 @@ const Template4 = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Plano Mensal */}
-            <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in">
+            <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in border border-gray-700">
               <div className="text-center mb-8">
                 <h4 className="text-2xl font-bold text-white mb-2">Plano Mensal</h4>
                 <div className="text-4xl font-bold text-white mb-2">
@@ -324,13 +374,13 @@ const Template4 = () => {
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_monthly.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 animate-fade-in-up">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
                     <span className="text-gray-400">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
-                className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
+                className="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-600 hover:from-indigo-400 hover:via-purple-400 hover:to-fuchsia-500 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover-glow"
                 onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=month`}
               >
                 Começar Agora
@@ -338,30 +388,30 @@ const Template4 = () => {
             </div>
 
             {/* Plano Anual */}
-            <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-600 animate-scale-in">
+            <div className="card-3d bg-gradient-to-br from-indigo-700 to-purple-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-indigo-500/60 ring-1 ring-indigo-500/30 hover:ring-2 hover:ring-indigo-500/50 animate-scale-in">
               <div className="text-center mb-8">
-                <div className="inline-block bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
+                <div className="inline-block bg-fuchsia-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 shadow-lg">
                   Mais vantajoso
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Plano Anual</h4>
                 <div className="text-4xl font-bold text-white mb-2">
                   R$ {appConfig.plan_price_annual}
                 </div>
-                <p className="text-gray-400">por ano</p>
-                <p className="text-gray-300 font-semibold text-sm mt-2">
+                <p className="text-purple-100">por ano</p>
+                <p className="text-purple-100 font-semibold text-sm mt-2">
                   Apenas R$ {(parseFloat(appConfig.plan_price_annual.replace(',', '.')) / 12).toFixed(2).replace('.', ',')} por mês
                 </p>
               </div>
               <ul className="space-y-4 mb-8">
                 {appConfig.plan_features_annual.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 animate-fade-in-up">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
-                    <span className="text-gray-400">{feature}</span>
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    <span className="text-purple-100">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
-                className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold transition-all duration-300 hover-glow"
+                className="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-600 hover:from-indigo-400 hover:via-purple-400 hover:to-fuchsia-500 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover-glow"
                 onClick={() => window.location.href = `${appConfig.app_url}/auth?mode=register&planType=year`}
               >
                 Começar Agora
@@ -381,7 +431,7 @@ const Template4 = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover-lift animate-fade-in-up">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4 animate-float">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mr-4 animate-float ring-2 ring-purple-400/40">
                   <span className="text-white font-bold">M</span>
                 </div>
                 <div>
@@ -393,7 +443,7 @@ const Template4 = () => {
             </div>
             <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover-lift animate-fade-in-up">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4 animate-float">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mr-4 animate-float ring-2 ring-purple-400/40">
                   <span className="text-white font-bold">J</span>
                 </div>
                 <div>
@@ -405,7 +455,7 @@ const Template4 = () => {
             </div>
             <div className="card-3d bg-gray-900 rounded-2xl p-8 shadow-lg hover-lift animate-fade-in-up">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4 animate-float">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mr-4 animate-float ring-2 ring-purple-400/40">
                   <span className="text-white font-bold">A</span>
                 </div>
                 <div>
@@ -430,13 +480,13 @@ const Template4 = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
             <button 
-              className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-glow"
+              className="px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-600 hover:from-indigo-400 hover:via-purple-400 hover:to-fuchsia-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-glow"
               onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Começar Agora
             </button>
             <button 
-              className="px-8 py-4 bg-white text-gray-800 border-2 border-gray-600 hover:bg-gray-100 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
+              className="px-8 py-4 bg-transparent text-indigo-100 border-2 border-indigo-400 hover:bg-indigo-50/10 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover-lift"
               onClick={() => window.open(`https://wa.me/${appConfig.support_whatsapp.replace(/\D/g, '')}`, '_blank')}
             >
               Falar no WhatsApp

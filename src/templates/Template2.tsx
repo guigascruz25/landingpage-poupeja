@@ -43,7 +43,7 @@ const Template2 = () => {
 
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up tracking-tight">
                 Controle suas finanças com
-                <span className="block mt-3 bg-gradient-to-r from-emerald-200 via-emerald-100 to-teal-200 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(16,185,129,0.5)] text-[1.1em] tracking-tighter">
+                <span className="block mt-3 text-amber-300 text-[1.15em] tracking-tighter font-extrabold">
                   inteligência e simplicidade
                 </span>
               </h2>
@@ -203,35 +203,83 @@ const Template2 = () => {
         </div>
       </section>
 
-      {/* Features Section - Emerald Luxury */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50/30">
+      {/* Seção de Benefícios - Estrutura padronizada do Template3 (variação só de cor) */}
+      <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">Por que escolher nossa plataforma?</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">Tecnologia avançada, segurança máxima e resultados comprovados</p>
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Por que escolher o {appConfig.company_name}?
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A solução mais completa e intuitiva para transformar sua vida financeira
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative group bg-white rounded-2xl p-8 shadow-emerald-sm hover:shadow-emerald-lg transition-all duration-500 animate-fade-in-up border-2 border-emerald-100 hover:border-emerald-300 hover:scale-105">
-              <div className="absolute -top-3 -right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Destaque</div>
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mb-6 animate-float-gentle group-hover:scale-110 transition-transform">
-                <Zap className="w-8 h-8 text-emerald-600" />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Benefício 1 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-emerald-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Dashboard Inteligente</h4>
-              <p className="text-gray-600 leading-relaxed">Visualize todas as suas finanças em um só lugar com insights personalizados e análises em tempo real.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Controle Instantâneo</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Gerencie todas suas finanças em tempo real com nossa interface intuitiva e poderosa.
+              </p>
             </div>
-            <div className="group bg-white rounded-2xl p-8 shadow-emerald-sm hover:shadow-emerald-lg transition-all duration-500 animate-fade-in-up border-2 border-emerald-100 hover:border-emerald-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mb-6 animate-float-gentle group-hover:scale-110 transition-transform">
-                <Shield className="w-8 h-8 text-emerald-600" />
+
+            {/* Benefício 2 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-emerald-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Segurança Máxima</h4>
-              <p className="text-gray-600 leading-relaxed">Criptografia de nível bancário e proteção total dos seus dados com tecnologia de ponta.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Segurança Total</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Seus dados protegidos com criptografia de nível bancário e autenticação avançada.
+              </p>
             </div>
-            <div className="group bg-white rounded-2xl p-8 shadow-emerald-sm hover:shadow-emerald-lg transition-all duration-500 animate-fade-in-up border-2 border-emerald-100 hover:border-emerald-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mb-6 animate-float-gentle group-hover:scale-110 transition-transform">
-                <Cpu className="w-8 h-8 text-emerald-600" />
+
+            {/* Benefício 3 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-emerald-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Cpu className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Automação Total</h4>
-              <p className="text-gray-600 leading-relaxed">Configure uma vez e deixe a plataforma trabalhar por você com inteligência artificial.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">IA Avançada</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Insights inteligentes e recomendações personalizadas para otimizar suas finanças.
+              </p>
+            </div>
+
+            {/* Benefício 4 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-emerald-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Crescimento Garantido</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Estratégias comprovadas para aumentar sua renda e patrimônio de forma consistente.
+              </p>
+            </div>
+
+            {/* Benefício 5 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-emerald-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <MessageCircle className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Suporte 24/7</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Nossa equipe especializada está sempre disponível para ajudar você a prosperar.
+              </p>
+            </div>
+
+            {/* Benefício 6 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-emerald-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Experiência Premium</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Interface elegante e funcionalidades exclusivas para uma experiência única.
+              </p>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@ const Template1 = () => {
 
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up tracking-tight">
                 Controle suas finanças com
-                <span className="block mt-3 bg-gradient-to-r from-orange-200 via-orange-100 to-red-200 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(232,91,11,0.5)] text-[1.1em] tracking-tighter">
+                <span className="block mt-3 text-cyan-300 text-[1.15em] tracking-tighter font-extrabold">
                   inteligência e simplicidade
                 </span>
               </h2>
@@ -203,65 +203,84 @@ const Template1 = () => {
         </div>
       </section>
 
-      {/* Seção de Benefícios COM EFEITOS */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-orange-50 opacity-40"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Seção de Benefícios - Estrutura padronizada do Template3 (variação só de cor) */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Por que escolher o {appConfig.company_name}?
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Descubra os benefícios que fazem a diferença na sua vida financeira
+              A solução mais completa e intuitiva para transformar sua vida financeira
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Zap className="w-8 h-8 text-orange-600" />,
-                title: "Velocidade Incomparável",
-                description: "Processamento em tempo real de todas as suas transações financeiras com tecnologia de ponta."
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-orange-600" />,
-                title: "Segurança Máxima",
-                description: "Criptografia de nível bancário e proteção avançada para manter seus dados sempre seguros."
-              },
-              {
-                icon: <Cpu className="w-8 h-8 text-orange-600" />,
-                title: "Inteligência Artificial",
-                description: "IA avançada que aprende seus hábitos e oferece insights personalizados para suas finanças."
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8 text-orange-600" />,
-                title: "Análises Avançadas",
-                description: "Relatórios detalhados e projeções inteligentes para otimizar seus investimentos."
-              },
-              {
-                icon: <MessageCircle className="w-8 h-8 text-orange-600" />,
-                title: "Suporte 24/7",
-                description: "Atendimento especializado disponível a qualquer hora para resolver suas dúvidas."
-              },
-              {
-                icon: <Star className="w-8 h-8 text-orange-600" />,
-                title: "Experiência Premium",
-                description: "Interface intuitiva e recursos exclusivos para uma experiência financeira única."
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-orange-100/50 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="mb-6 p-3 bg-orange-100 rounded-xl w-fit group-hover:bg-orange-200 transition-colors duration-300">
-                  {benefit.icon}
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
-                  {benefit.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
+            {/* Benefício 1 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Zap className="w-8 h-8 text-white" />
               </div>
-            ))}
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Controle Instantâneo</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Gerencie todas suas finanças em tempo real com nossa interface intuitiva e poderosa.
+              </p>
+            </div>
+
+            {/* Benefício 2 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Segurança Total</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Seus dados protegidos com criptografia de nível bancário e autenticação avançada.
+              </p>
+            </div>
+
+            {/* Benefício 3 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Cpu className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">IA Avançada</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Insights inteligentes e recomendações personalizadas para otimizar suas finanças.
+              </p>
+            </div>
+
+            {/* Benefício 4 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Crescimento Garantido</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Estratégias comprovadas para aumentar sua renda e patrimônio de forma consistente.
+              </p>
+            </div>
+
+            {/* Benefício 5 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <MessageCircle className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Suporte 24/7</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Nossa equipe especializada está sempre disponível para ajudar você a prosperar.
+              </p>
+            </div>
+
+            {/* Benefício 6 */}
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-orange-100/50">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Experiência Premium</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Interface elegante e funcionalidades exclusivas para uma experiência única.
+              </p>
+            </div>
           </div>
         </div>
       </section>
