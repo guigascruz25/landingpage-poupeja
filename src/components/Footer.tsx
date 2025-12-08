@@ -118,6 +118,18 @@ const Footer = () => {
           <p className="text-background/60 text-sm">
             Desenvolvido com ❤️ para ajudar você a alcançar seus objetivos financeiros
           </p>
+          <div className="mt-3">
+            <button
+              className="text-background/80 hover:text-background underline text-sm"
+              onClick={() => window.dispatchEvent(new Event("open-cookie-consent"))}
+            >
+              Preferências de Privacidade
+            </button>
+            <span className="mx-2">•</span>
+            <a href="/auditoria-consentimento" className="text-background/80 hover:text-background underline text-sm">
+              Relatório de Auditoria
+            </a>
+          </div>
         </div>
       </div>
     </footer>

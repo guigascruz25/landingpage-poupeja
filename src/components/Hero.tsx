@@ -1,4 +1,5 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/facebookPixel";
 import { appConfig } from "@/config/app";
 
 const Hero = () => {
@@ -69,7 +70,10 @@ const Hero = () => {
             variant="hero-primary" 
             size="lg"
             className="w-full sm:w-auto text-base font-semibold px-10 py-6 h-auto rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
-            onClick={() => window.open(`${appConfig.app_url}/login`, '_blank')}
+            onClick={() => {
+              trackEvent("Lead", { source: "hero_access_app" });
+              window.open(`${appConfig.app_url}/login`, '_blank');
+            }}
           >
             Acessar App
           </Button>

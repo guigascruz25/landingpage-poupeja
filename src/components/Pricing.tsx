@@ -1,5 +1,6 @@
 import { Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/facebookPixel";
 import { appConfig } from "@/config/app";
 
 const Pricing = () => {
@@ -42,7 +43,10 @@ const Pricing = () => {
             <Button 
               className="w-full font-semibold text-base h-12 rounded-xl shadow-md hover:shadow-lg transition-all duration-300" 
               size="lg"
-              onClick={() => window.open(generatePlanUrl('monthly'), '_blank')}
+              onClick={() => {
+                trackEvent("InitiateCheckout", { planType: "monthly" });
+                window.open(generatePlanUrl('monthly'), '_blank');
+              }}
             >
               Começar Plano Mensal
             </Button>
@@ -81,7 +85,10 @@ const Pricing = () => {
             <Button 
               className="w-full bg-gradient-primary hover:opacity-90 font-semibold text-base h-12 rounded-xl shadow-md hover:shadow-lg transition-all duration-300" 
               size="lg"
-              onClick={() => window.open(generatePlanUrl('annual'), '_blank')}
+              onClick={() => {
+                trackEvent("InitiateCheckout", { planType: "annual" });
+                window.open(generatePlanUrl('annual'), '_blank');
+              }}
             >
               Começar Plano Anual
             </Button>
