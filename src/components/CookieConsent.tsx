@@ -33,7 +33,7 @@ const CookieConsent = () => {
             Usamos cookies e tecnologias semelhantes para melhorar sua experiência, analisar uso e oferecer conteúdo personalizado.
             Você pode aceitar ou recusar o uso para fins de marketing e análise. Leia nossa
             {" "}
-            <a href={appConfig.privacy_url} target="_blank" rel="noopener noreferrer" className="text-primary underline">Política de Privacidade</a>.
+            <a href={appConfig.privacy_url} className="text-primary underline">Política de Privacidade</a>.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-3 mt-4">
